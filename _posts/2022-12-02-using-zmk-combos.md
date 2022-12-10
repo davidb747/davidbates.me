@@ -1,5 +1,5 @@
 ---
-title: "using combos on zmk"
+title: "Using combos on ZMK"
 date: 2022-12-10
 toc: true
 mermaid: true
@@ -23,7 +23,7 @@ For reference, currently I'm using a [Fingerpunch rock on](https://fingerpunch.x
 
 The current physical layout/keyboard I'm working with:
 
-![Fingerpunch rock on](../assets/images/rock-on.jpeg)
+![Fingerpunch rock on](/assets/images/rock-on.jpeg)
 _Fingerpunch rock on_
 
 # Enter combos
@@ -42,7 +42,7 @@ In my case it came to a combo of key 60 and 61.
 
 See the following example:
 
-![Fingerpunch rock on](../assets/images/rock-on-count.jpeg)
+![Fingerpunch rock on](/assets/images/rock-on-count.jpeg)
 _Fingerpunch rock on with explanation_
 
 ## Setting up the combo
