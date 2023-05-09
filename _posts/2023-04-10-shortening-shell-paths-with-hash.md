@@ -111,4 +111,4 @@ And this works from anywhere on your system.
 
 # Conclusion
 
-We can use `hash` to make our terminal usage more clear and organized. If you are like me and work with a pretty rigged folder structure (PARA) then you know how nice it is to be able to jump to Projects, Areas and Resources quickly.
+We can use `hash` to make our terminal usage more clear and organized. If you are like me and work with a pretty rigged folder structure ((PARA)[https://www.buildingasecondbrain.com/para]) then you know how nice it is to be able to jump to Projects, Areas and Resources quickly.
