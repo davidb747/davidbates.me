@@ -1,6 +1,6 @@
 ---
 title:  "Shortening shell paths with hash"
-date: 2023-04-10 HH:MM:SS +/-TTTT
+date: 2023-04-10
 toc: true
 mermaid: true
 categories: [Commandline]
@@ -44,7 +44,7 @@ Well!
 
 > The /usr/bin/hash utility affects the way the current shell environment remembers the locations of utilities found. Depending on the arguments specified, it adds utility locations to its list of remembered locations or it purges the contents of the list. When no arguments are specified, it reports on the contents of the list. The `-r` option causes the shell to forget all remembered locations.
 
-> Utilities provided as built-ins to the shell are not reported by hash. 
+> Utilities provided as built-ins to the shell are not reported by hash.
 
 -- StackExchange2023 [^Stack]
 
@@ -66,7 +66,7 @@ For example, we will shorten the path `/home/user/baseDir/Work` to `Work` like t
 hash -d Work="/home/user/baseDir/Work"
 ```
 
-This will turn your shell path from `/home/user/baseDir/Work` to `~Work` when you are in that directory. 
+This will turn your shell path from `/home/user/baseDir/Work` to `~Work` when you are in that directory.
 That's really great. You can now easily see that you're in your "Work" folder, giving you a better understanding of your system's structure.
 
 But wait! Theres more!
