@@ -120,4 +120,6 @@ _Example of moving a file to a folder that is hashed_
 
 # Conclusion
 
-We can use `hash` to make our terminal usage more clear and organized. If you are like me and work with a pretty rigged folder structure ((PARA)[https://www.buildingasecondbrain.com/para]) then you know how nice it is to be able to jump to Projects, Areas and Resources quickly.
+We can use `hash` to make our terminal usage more clear and organized. If you are like me and work with a pretty rigged folder structure like PARA [^PARA] then you know how nice it is to be able to jump to Projects, Areas and Resources quickly.
+
+[^PARA]: https://www.buildingasecondbrain.com/para
