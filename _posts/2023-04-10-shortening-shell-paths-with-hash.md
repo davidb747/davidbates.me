@@ -69,6 +69,9 @@ hash -d Work="/home/user/baseDir/Work"
 This will turn your shell path from `/home/user/baseDir/Work` to `~Work` when you are in that directory.
 That's really great. You can now easily see that you're in your "Work" folder, giving you a better understanding of your system's structure.
 
+![](/assets/images/hash/screenshot-ll2B6SA8.gif)
+_Example of shortening shell path when entering directory_
+
 But wait! Theres more!
 
 ## Permanence
@@ -91,6 +94,9 @@ Set up aliases to easily navigate to them. For example:
 $ cd ~Work
 ```
 
+![](/assets/images/hash/screenshot-dk2k2KnR.gif)
+_Moving to hashed dir from anywhere by using ~ALIAS_
+
 You can also use tab completion to easily navigate to sub folders.
 
 ## Bonus two: Easy copy
@@ -104,10 +110,13 @@ $ cp FILE ~Work
 This makes it easy to copy files from `~Downloads` to `~Work`. You could for example move a downloaded pdf easliy like:
 
 ```bash
-$ cp ~Downloads/TheExpanseRapport.pdf ~Word
+$ cp ~Downloads/TheExpanseRapport.pdf ~Work
 ```
 
 And this works from anywhere on your system.
+
+![](/assets/images/hash/screenshot-qGJRnAtH.gif)
+_Example of moving a file to a folder that is hashed_
 
 # Conclusion
 
