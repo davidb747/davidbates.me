@@ -69,7 +69,7 @@ hash -d Work="/home/user/baseDir/Work"
 This will turn your shell path from `/home/user/baseDir/Work` to `~Work` when you are in that directory.
 That's really great. You can now easily see that you're in your "Work" folder, giving you a better understanding of your system's structure.
 
-![](/assets/images/hash/screenshot-ll2B6SA8.gif)
+![](/assets/images/hash/screenshot-ll2B6SA8.gif){:style="display:block; margin-left:auto; margin-right:auto";}
 _Example of shortening shell path when entering directory_
 
 But wait! Theres more!
@@ -81,7 +81,7 @@ Aliases are only valid for the current session, so if you want to make them perm
 ```bash
 # /home/user/.zshrc
 ....
-hash -d Work="/home/user/baseDir/Work"
+hash -d Work="/home/user/baseDir/Work"  
 hash -d Personal="/home/user/baseDir/Personal"
 hash -d Downloads="/home/user/baseDir/Downloads"
 ```
@@ -94,7 +94,7 @@ Set up aliases to easily navigate to them. For example:
 $ cd ~Work
 ```
 
-![](/assets/images/hash/screenshot-dk2k2KnR.gif)
+![](/assets/images/hash/screenshot-dk2k2KnR.gif){:style="display:block; margin-left:auto; margin-right:auto";}
 _Moving to hashed dir from anywhere by using ~ALIAS_
 
 You can also use tab completion to easily navigate to sub folders.
@@ -115,7 +115,7 @@ $ cp ~Downloads/TheExpanseRapport.pdf ~Work
 
 And this works from anywhere on your system.
 
-![](/assets/images/hash/screenshot-qGJRnAtH.gif)
+![](/assets/images/hash/screenshot-qGJRnAtH.gif){:style="display:block; margin-left:auto; margin-right:auto";}
 _Example of moving a file to a folder that is hashed_
 
 # Conclusion
