@@ -21,7 +21,7 @@ I'm also going to change the background color of the tag, just to let it stand o
 
 # Creating a custom `css` file
 
-You can easily add custom CSS to Obsidian using CSS Snippets. These are located in your vault located in the `vault/.obsidian/snippets/`. Create a custom file (for example `customTags.css`) and enable the snippet in Obsidian settings. See the official documentation over at <https://help.obsidian.md/Advanced+topics/Customizing+CSS> .
+You can easily add custom CSS to Obsidian using CSS Snippets. These are located in your vault located in the `vault/.obsidian/snippets/`. Create a custom file (for example `customTags.css`) and enable the snippet in Obsidian settings. See the official documentation over at <https://help.obsidian.md/Extending+Obsidian/CSS+snippets> .
 
 # Creating custom tag's
 
@@ -72,7 +72,7 @@ Using the following CSS code we can easily create the custom Tag's:
 }
 ```
 
-Get a copy at [GitHub](https://gist.github.com/KingOfSpades/a7e38c6ebe8c291a559fbdc1418ef053) 
+Get a copy at [GitHub](https://gist.github.com/KingOfSpades/a7e38c6ebe8c291a559fbdc1418ef053)
 
 This will map the CSS to the tag's and will create the following output:
 ![Example Tags](/assets/images/20210421193541.png)
