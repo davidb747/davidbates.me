@@ -13,3 +13,5 @@ Disallow: /
 
 User-agent: CCBot
 Disallow: /
+
+sitemap: https://blog.benstein.nl/sitemap.xml
