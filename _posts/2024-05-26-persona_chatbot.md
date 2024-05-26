@@ -115,7 +115,7 @@ Multi turn의 캐릭터 대화에서 Purpose(P)-Action(A)-Situation(S)을 추출
 
 <br>
 
-2-2. Action 
+## 2-2. Action 
 
 ![persona_action](/assets/ml/pas_action.png)
 
@@ -185,7 +185,7 @@ PAS 데이터셋은 분명 캐릭터에 확실한 페르소나를 부여할 것�
 
 <br>
 
-4. 마치며 
+# 4. 마치며 
 
 <br>
 
