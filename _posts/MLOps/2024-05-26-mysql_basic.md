@@ -9,7 +9,7 @@ cover: /assets/backend_mlops/mysql_thumbnail.jpg
 # 0. 설치
 
 ```bash
-brew install mysql	# 맥기준
+brew install mysql	# Mac 기준
 ```
 
 <br>
