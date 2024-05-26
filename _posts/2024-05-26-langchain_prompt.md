@@ -11,11 +11,10 @@ article_header:
 
 # 1. 개요 및 필요성
 
--   prompt template을 쉽게 재사용할 수 있도록 만들어진 langchain 내장 툴
--   user prompt, system\_prompt별로 명확하게 용도를 구분할 수 있음
--   llm모델에 탑재가 용이함 ("|" 기호를 이용해 모델에 프롬프트를 연결할 수 있음 )
--   다만, 동일한 역할을 하는 함수의 종류가 많아서 어느 경우에 뭘 써야할지 좀 헷갈림
--   OpenAI API template 형태
+- <u>prompt template을 쉽게 재사용할 수 있도록 만들어진 langchain 내장 툴</u>
+- user prompt, system\_prompt별로 명확하게 용도를 구분할 수 있음
+- llm모델에 탑재가 용이함 ("\|" 기호를 이용해 모델에 프롬프트를 연결할 수 있음)
+- 다만, 동일한 역할을 하는 함수의 종류가 많아서 어느 경우에 뭘 써야할지 좀 헷갈림
 
 <br>
 
@@ -121,6 +120,7 @@ prompt_template.format(adjective="funny", content="chickens")
 ```
 # 방식 2. template 지정과 변수할당을 동시에 하는 방식
 # 복잡하고 langchain에서도 추천하지는 않는 방식
+
 from langchain_core.prompts import PromptTemplate
 
 prompt = PromptTemplate(input_variables=["foo"], template="Say {foo}")
@@ -187,15 +187,23 @@ print(messages)
 
 ## 3-3. MessagePrompt
 
--   프롬프트가 정적(메시지)이냐 동적(템플릿)이냐에 따라 두 종류로 나뉨
+프롬프트가 정적(메시지)이냐 동적(템플릿)이냐에 따라 두 종류로 나뉨
+
+<br>
+
 -   정적인 프롬프트
     1.  AIMessage
     2.  HumanMessage
     3.  SystemMessage
+
+<br>
+
 -   동적인 프롬프트
     1.  AIMessagePromptTemplate
     2.  HumanMessagePromptTemplate
     3.  SystemMessagePromptTemplate
+
+<br>
 
 ```
 # 정적인 프롬프트 
@@ -272,7 +280,7 @@ prompt_val = prompt_template.invoke({"adjective": "funny", "content": "chickens"
 
 # 5. 내가 사용하는 방식
 
-1.  set\_prompt method 구성
+- set\_prompt method 구성
     -   용도: System prompt 및 Fewshot prompt 설정
 
 ```
@@ -293,7 +301,7 @@ def set_prompt():
 
 <br>
 
-2.  user message 추가 후 LLM 모델에서 RUN
+- user message 추가 후 LLM 모델에서 RUN
 
 ```
 from langchain_core.messages import HumanMessage
