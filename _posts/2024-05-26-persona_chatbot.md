@@ -3,10 +3,7 @@ layout: article
 title: 세계관 정보 기반 페르소나 챗봇 만들기 w.네이버 DEVIEW 2021
 aside:
   toc: true
-article_header:
-  type: cover
-  image:
-    src: /assets/ml/persona_3_component.png
+cover: /assets/ml/persona_3_component.png
 ---
 
 페르소나, 사전적 의미로 '외적인 인격'을 뜻하는데요.

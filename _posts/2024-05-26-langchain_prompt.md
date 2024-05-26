@@ -3,10 +3,7 @@ layout: article
 title: Langchain의 Prompt 구조
 aside:
   toc: true
-article_header:
-  type: cover
-  image:
-    src: /assets/ml/langchain_image.png
+cover: /assets/ml/langchain_image.png
 ---
 
 # 1. 개요 및 필요성
