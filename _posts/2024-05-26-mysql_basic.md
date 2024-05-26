@@ -3,11 +3,9 @@ layout: article
 title: MySQL 설정 방법, 명령어, 키워드 및 자료구조 정리
 aside:
   toc: true
-article_header:
-  type: cover
-  image:
-    src: /assets/backend_mlops/mysql_thumbnail.jpg
 ---
+
+![mysql_thumbnail](/assets/backend_mlops/mysql_thumbnail.jpg)
 
 
 # 0. 설치
