@@ -25,7 +25,7 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       MLOps
+      en      : &EN       MLOps/Backend
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -35,7 +35,7 @@ header:
       zh-SG   : *ZH_HANS
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       MLOps
+      ko      : &KO       MLOps/Backend
       ko-KR   : *KO
       fr-BE   : *FR
       fr-CA   : *FR
