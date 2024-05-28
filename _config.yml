@@ -211,7 +211,7 @@ collections:
   llm:
     output: true
     permalink: /llm/:name/
-  basic_programming:
+  others:
     output: true
     permalink: /others/:name/
 
