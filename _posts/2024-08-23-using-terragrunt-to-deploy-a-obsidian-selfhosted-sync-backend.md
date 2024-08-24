@@ -74,4 +74,4 @@ Setting up sync can be done by following the instructions provided by [obsidian-
 
 # Closing thoughts
 
-With `s3` as an end-point I might also give that a try. I had mixed results in the last 4 weeks I have been testing the selfhosted obsidian-livesync and I'm a bit weary about putting my trust in it. I might just pay extra to sync another vault or go mono vault again.
+With `s3` as an end-point being in beta right now, I might also give that a try. I had mixed results in the last 4 weeks I have been testing the selfhosted obsidian-livesync and I'm a bit weary about putting my trust in it. I might just pay extra to sync another vault or go mono vault again.
