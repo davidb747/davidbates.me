@@ -1,3 +1,12 @@
+---
+title: Using terragrunt to create a selfhosted Obsidian Sync backend
+date: 2024-08-23
+toc: true
+mermaid: true
+categories: ["Infrastructure as Code"]
+tags: ["devops"]
+---
+
 I have been playing around with Self hosting my [Obsidian](https://obsidian.md/) vaults. I pay for [Obsidian sync](https://obsidian.md/sync) for my main vault right now, but I started a new job, and I'm looking into working with multiple vaults to keep things tidy. Now, Obsidian sync is a great working solution to sync your data, but there are other options out there, like [Selfhosted obsidian-livesync](https://github.com/vrtmrz/obsidian-livesync) (the one we are looking at here), [Remote Save](https://github.com/remotely-save/remotely-save) and syncing your vault via [SyncThing](https://syncthing.net/).
 
 I opted to try out obsidian-livesync via a self hosted database because I also want my vault to be available on iOS devices.
