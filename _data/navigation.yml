@@ -30,4 +30,9 @@ header:
       # @end locale config
     url: /about.html
 
-  
+
+  - titles:
+      # @start locale config
+      en      : &EN       Recommendations
+      # @end locale config
+    url: /recommendations.html
