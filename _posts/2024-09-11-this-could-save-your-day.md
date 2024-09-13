@@ -7,9 +7,14 @@ categories:
   - Life Hacks
 tags:
   - "macos"
+  - "backups"
 ---
 
 Ever found out at the wrong moment that your TimeMachine backup is not working any more? That the last backup was from two weeks ago? Or you're on the road, and you can't get that backup because it's a thousand miles from your current location? Then I got something **for you**
+
+# TimeMachine
+
+Let's take a step back. If you have a Mac and have never used or heard of [TimeMachine](https://support.apple.com/en-us/104984), then let's have a look at that first. [TimeMachine](https://support.apple.com/en-us/104984) is a backup utility bundled with your Mac. You can use it to restore files that you have deleted, recover older versions of files, or set up an empty Mac from a backup. This makes it a no-brainer to use for simple backups of your system. You can set up Time Machine to make backups to an external drive or a network-mounted location (like on a NAS). It won't cover advanced use cases like [Carbon Copy Cloner](https://bombich.com/), but it will give you a first line of backups if you ever need them. The best part is, it's pretty much fire-and-forget after you set it up.
 
 # The JetDrive 330
 
