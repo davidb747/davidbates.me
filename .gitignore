@@ -1,27 +1,36 @@
-*~
-~*
-*.diff
-*.patch
-*.bak
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
 .DS_Store
-*.swp
-*.swo
-*.log
-*.log.*
+.AppleDouble
+.LSOverride
 
-/.vscode/
+# Icon must ends with two \r.
+Icon
 
-node_modules/
-.sass-cache/
+# Thumbnails
+._*
 
-/.bundle/
-/vendor/bundle
-*.gem
-
-yarn.lock
-package-lock.json
-Gemfile.lock
-
-_site/
-.jekyll-metadata
-.jekyll-cache/
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
