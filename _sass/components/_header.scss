@@ -64,10 +64,11 @@
   @include flexbox();
   @include align-items(center);
   & > svg {
-    width: map-get($base, font-size-h4) * 1.6;
-    height: map-get($base, font-size-h4) * 1.6;
+    width: map-get($base, font-size-h4) * 10;
+    height: map-get($base, font-size-h4) * 10;
     margin-right: map-get($spacers, 3);
     vertical-align: middle;
+    margin-top: 1rem;
     @include media-breakpoint-down(md) {
       width: map-get($base, font-size-h4) * 1.2;
       height: map-get($base, font-size-h4) * 1.2;

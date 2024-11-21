@@ -223,3 +223,12 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+
+## Custom folders
+##############################
+
+collections:
+  about:
+    output: true
+  
