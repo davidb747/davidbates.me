@@ -23,6 +23,9 @@
   {%- else -%}
   <div class="article-list grid grid--p-3">
   {%- endif -%}
+{%- elsif include.type == 'timeline' -%}
+<div class="article-list timeline-items">
+{%- assign _date = '' -%}
 {%- endif -%}
 
   {%- for _article in _sorted_list -%}
@@ -138,6 +141,32 @@
           </div>
         </div>
       {%- endif -%}
+    {%- elsif include.type == 'timeline' -%}
+    {%- if _article.cover and include.show_cover-%}
+          {%- include snippets/get-nav-url.html path=_article.cover -%}
+          {%- assign _article_cover = __return -%}
+          <div class="item__image">
+          {%- if include.cover_size == 'lg' -%}
+            <img class="image image--lg" src="{{ _article_cover }}" />
+          {%- elsif include.cover_size == 'sm' -%}
+            <img class="image image--sm" src="{{ _article_cover }}" />
+          {%- else -%}
+            <img class="image" src="{{ _article_cover }}" />
+          {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- assign _currentdate = _article.date | date: '%Y' -%}
+      {%- if _currentdate != _date -%}
+        {%- unless forloop.first -%}</ul></section>{%- endunless -%}
+        <section><h2 class="article-list__group-header">{{ _currentdate }}</h2><ul class="timeline-items">
+        {%- assign _date = _currentdate -%}
+      {%- endif -%}
+      <li class="timeline-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="timeline-item__content">
+          <span class="timeline-item__meta">{{ _article.date | date: '%b %d' }}</span>
+          <a itemprop="headline" class="timeline-item__header" href="{{ _article_url }}">{{ _article.title }}</a>
+        </div>
+      </li>
     {%- endif -%}
   {%- endfor -%}
 

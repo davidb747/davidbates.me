@@ -1,13 +1,5 @@
 header:
   - title: Quiénes Somos
     url: /pages/quienes-somos/
-  - title: Lineas de Investigación
-    url: /pages/lineas-de-investigacion/
-  - title: Mapas y Datos
-    url: /pages/mapas-y-datos/
-  - title: Biblioteca
-    url: /pages/biblioteca/
-  - title: Publicaciones
-    url: /pages/publicaciones/
-  - title: Contátenos
-    url: /pages/contactenos/
+  - title: Linea del tiempo
+    url : /pages/linea-del-tiempo/

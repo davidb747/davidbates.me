@@ -231,4 +231,5 @@ plugins:
 collections:
   about:
     output: true
-  
+  timeline:
+    output: true
