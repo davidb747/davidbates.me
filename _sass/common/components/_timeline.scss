@@ -85,7 +85,9 @@ a > .timeline-item__header, a.timeline-item__header, .timeline-item__header > a 
     }
   }
 }
-
+.timeline-item-hidden {
+  display: none;
+}
 .timeline-items--divided {
   & > .timeline-item {
     &:not(:first-child) {

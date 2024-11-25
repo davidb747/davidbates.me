@@ -165,9 +165,35 @@
         <div class="timeline-item__content">
           <span class="timeline-item__meta">{{ _article.date | date: '%b %d' }}</span>
           <a itemprop="headline" class="timeline-item__header" href="{{ _article_url }}">{{ _article.title }}</a>
+          <button class="button--info button--pill timeline-item__toggle">Show content</button>
+          <div class="timeline-item__body timeline-item-hidden">
+            {%- if _article.content -%}
+              {{ _article.content | markdownify }}
+            {%- else -%}
+              <p>{{ _article.excerpt | strip_html | truncate: _excerpt_truncate }}</p>
+            {%- endif -%}
+          </div>
         </div>
       </li>
     {%- endif -%}
   {%- endfor -%}
 
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.timeline-item__toggle');
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var content = this.nextElementSibling;
+        if (content.classList.contains('timeline-item-hidden')) {
+          content.classList.remove('timeline-item-hidden');
+          this.textContent = 'Hide Content';
+        } else {
+          content.classList.add('timeline-item-hidden');
+          this.textContent = 'Show Content';
+        }
+      });
+    });
+  });
+</script>

@@ -1,7 +1,7 @@
 ---
 layout: articles
-title: Linea del tiempo
-permalink: /pages/linea-del-tiempo.html
+title: Quienes Somos
+permalink: /pages/quienes-somos.html
 key: articles-grid
 cover: /assets/images/axure/cover1.jpg
 articles:
