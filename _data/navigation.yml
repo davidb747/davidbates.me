@@ -1,5 +1,5 @@
 header:
   - title: Quiénes Somos
-    url: /pages/quienes-somos/
+    url: "{{ site.baseurl }}/pages/quienes-somos/"
   - title: Linea del tiempo
-    url : /pages/linea-del-tiempo/
+    url: "{{ site.baseurl }}/pages/linea-del-tiempo/"
