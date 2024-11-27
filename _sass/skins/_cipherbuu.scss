@@ -1,0 +1,105 @@
+///
+// Skin: Orange
+// Author: Tian Qi
+// Email: kitian616@outlook.com
+///
+
+// main colors
+$main-color-1:     #ff79c6; // Controls Text Hover Color 
+$text-color-1:     #fff; //was fff
+
+$main-color-2:     #7da2aa; // Controls Archive's "Show All" Button, but not sure what else 
+$text-color-2:     #fff; // Control's Arhive Show All button text color
+
+$main-color-3:     #7da2aa; // Controls Button Colors
+$text-color-3:     #fff; // Controls text color inside Buttons and highlight color
+$main-color-theme-light: rgba(#000, .9);
+$main-color-theme-dark:  rgba(#fff, .9);
+
+// page background
+$background-color: #c1beb4;
+//$background-color: #508AED; 
+//$background-color: #293241; // Previous BG
+
+// text colors (was black)
+$text-color-theme-light-d: #000;
+$text-color-theme-light:   #000;
+$text-color-theme-light-l: #000;
+
+// text colors
+//$text-color-theme-light-d: rgba(#000, .95);
+//$text-color-theme-light:   rgba(#000, .85);
+//$text-color-theme-light-l: rgba(#000, .5);
+$text-color-theme-dark-d:  rgba(#151219, .95);
+$text-color-theme-dark:    rgba(#151219, .85);
+$text-color-theme-dark-l:  rgba(#151219, .65);
+
+// Default dark text-color-theme 
+//$text-color-theme-dark-d:  rgba(#fff, .95);
+//$text-color-theme-dark:    rgba(#fff, .85);
+//$text-color-theme-dark-l:  rgba(#fff, .65);
+
+$text-color-d:     #876991; // Controls Headings Text Color
+//$text-color-d:     $text-color-theme-light-d;
+//$text-color:       $text-color-theme-light;
+$text-color:       #151219; // Controls body text color
+$text-color-l:     #151219; // Controls Date Color (probably like alternate text's
+//$text-color-l:     $text-color-theme-light-l;
+
+$text-background-color: rgba(#000, .05);
+
+// header and footer colors
+$header-text-color: $text-color-3; // Previous Header/footer highlight-text color
+$header-background: linear-gradient(90deg, #1a0033, #4a007f, #1a0033); // Purple Schema generated from colormind.io
+
+// PREVIOUS BACKGROUNDS FOR HEADER / FOOTER 
+// $header-background: linear-gradient(60deg, #ff4d4d 0%, #ff4d4d 40%, #4d79ff 60%, #4d79ff 100%); // Softer Gradient Center
+//$header-background: linear-gradient(60deg, #ff4d4d 0%, #4d79ff 100%); // Red and Blue
+//$header-background: linear-gradient(60deg, #50aaff 0%, #2a3dff 100%);
+// $header-background: linear-gradient(60deg, #50aaff 0%, #507bff 100%);
+// Brighter Blue: $header-background: linear-gradient(60deg, #50d4ff 0%, #505aff 100%); // Brighter Left-side Blue
+// $header-background: linear-gradient(60deg, #ffa650 0%, #ff7b50 100%); // Previous Orange
+
+$footer-text-color: $text-color-3;
+$footer-background: linear-gradient(90deg, #1a0033, #4a007f, #1a0033); // Purple Schema generated from colormind.io
+//$footer-background: linear-gradient(60deg, #50aaff 0%, #2a3dff 100%); 
+//$footer-background: linear-gradient(60deg, #ffa650 0%, #ff7b50 100%); // Previous Orange
+
+// border and shadow colors
+$border-color:     blue; 
+$border-color-l:   blue;
+$decorate-color:   rgba(#000, .1);
+$mask-color:       rgba(#000, .9);
+$select-color:     rgba($main-color-3, .5);
+
+
+
+//$border-color:     mix($main-color-1, $background-color, 50%); // Change Anchor Icon Color
+$border-color-l:   mix(#000, $background-color, 10%);
+$decorate-color:   rgba(#000, .1);
+$mask-color:       rgba(#000, .9);
+$select-color:     rgba($main-color-3, .5);
+
+// function colors
+$green:           #52c41a;
+$blue:            #1890ff;
+$yellow:          #fa8c16;
+$red:             #f5222d;
+$text-color-function: #fff;
+
+// logo colors
+$mail-color:       #0072c5;
+$facebook-color:   #4267b2;
+$twitter-color:    #1da1f2;
+$weibo-color:      #e6162d;
+$google-plus-color:#ea4335;
+$telegram-color:   #32afed;
+$medium-color:     #000;
+$zhihu-color:      #0084ff;
+$douban-color:     #42bd56;
+$linkedin-color:   #1074af;
+$github-color:     #000; //was 000 (black)
+$npm-color:        #fff;
+
+// highlight colors
+@import "skins/highlight/tomorrow-night";

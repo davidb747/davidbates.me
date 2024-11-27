@@ -21,6 +21,7 @@ html,
 
 .page__main {
   height: 100%;
+  //color: #151219; // Changes Body Text color
   color: $text-color;
   .col-aside {
     display: none;
@@ -72,6 +73,7 @@ html,
   display: none;
 }
 
+// ORIGINAL SIDE BAR CODE
 .page__sidebar {
   z-index: map-get($z-indexes, sidebar);
   display: block;
@@ -82,12 +84,15 @@ html,
   @include split-line(right);
   @include transition(transform map-get($animation, duration));
   @include overflow(auto);
+  
   .sidebar-toc {
     padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
   }
 }
+
+
 .sidebar-button {
-  @include clickable($text-color-d, rgba($main-color-3, .75));
+  @include clickable($text-color-d, rgba($main-color-1, .60)); // Change Side Bar Button Highlight
 }
 
 .page__mask {

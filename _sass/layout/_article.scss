@@ -5,12 +5,12 @@
   padding-top: map-get($spacers, 3);
   margin: map-get($spacers, 4) 0 map-get($spacers, 3) 0;
   word-wrap: break-word;
-  @include split-line(top, 4px);
+  @include split-line(top, 8px); // Changes Seperator Line on Articles where you can click Previous and a Next Article
   & > .previous, & > .next {
     width: 50%;
     & > span {
       font-weight: map-get($base, font-weight-bold);
-      color: $text-color-l;
+      color: #4CAF50; // Controls Previous and Next Color
     }
     & > a {
       display: block;

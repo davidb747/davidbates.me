@@ -7,11 +7,12 @@
   @include align-items(center);
   color: $footer-text-color;
   background: $footer-background;
+  height: map-get($layout, header-height); // Added by me to match height w/header
   a {
     @include link-colors ($footer-text-color, $main-color-1);
   }
   .site-info {
-    font-size: map-get($base, font-size-xs);
+    font-size: map-get($base, font-size-h6);
     text-align: center;
     .menu {
       line-height: map-get($base, line-height-xs);

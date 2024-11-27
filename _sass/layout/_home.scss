@@ -7,6 +7,7 @@
     @include overflow(auto);
   }
   .pagination__omit {
+    //color: #151219; // Added by me, couldnt findout purpose. Does not change the page's text color
     color: $text-color-l;
   }
   .items {

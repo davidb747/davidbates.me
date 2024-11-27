@@ -64,8 +64,8 @@
   @include flexbox();
   @include align-items(center);
   & > svg {
-    width: map-get($base, font-size-h4) * 1.6;
-    height: map-get($base, font-size-h4) * 1.6;
+    width: map-get($base, font-size-h4) * 3.5; // Change # to increase brand logo.svg size
+    height: map-get($base, font-size-h4) * 3.5; // Change # to increase brand logo.svg size
     margin-right: map-get($spacers, 3);
     vertical-align: middle;
     @include media-breakpoint-down(md) {
@@ -75,7 +75,7 @@
   }
   & > a {
     display: inline-block;
-    font-size: map-get($base, font-size-h4);
+    font-size: map-get($base, font-size-nav); // Controls CipherBuu in Header
     @include media-breakpoint-down(md) {
       font-size: map-get($base, font-size-h4-small);
     }
@@ -86,6 +86,7 @@
   @include overflow(auto, "x");
   & > ul {
     height: map-get($layout, header-height);
+    font-size: map-get($base, font-size-nav); // Change nav-bar item font sizes
     padding-bottom: 0;
     margin: 0;
     @include media-breakpoint-down(md) {
@@ -121,3 +122,4 @@
     @include split-line(bottom, 4px, $main-color-1);
   }
 }
+

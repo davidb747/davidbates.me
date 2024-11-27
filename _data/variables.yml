@@ -6,13 +6,13 @@ default:
     root: /
     home: /
     archive:  /archive.html
-    rss:  /feed.xml
+    #rss:  /feed.xml
   mathjax: false
   mathjax_autoNumber: false
   mermaid: false
   chart: false
   toc:
-    selectors: 'h1,h2,h3'
+    selectors: 'h1,h2,h3,h4'
   sources: bootcdn
 
   page:

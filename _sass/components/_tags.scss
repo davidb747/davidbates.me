@@ -1,6 +1,8 @@
 .site-tags {
-  .tag-button {
-    @include clickable($text-color-3, $main-color-3, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+  .tag-button {    
+    @include clickable($text-color-3, #4CAF50, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+    //@include clickable($text-color-3, green, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);  
+    // Clickable (arch-show-btn-txt,arch-show-btn-color, arch-show-btn-color-hover-text-color, arch-show-btn-hover-backgrnd, ???, color-transition-when-clicked,  
     & > .tag-button__count {
       display: inline-block;
       margin-left: map-get($spacers, 1);
