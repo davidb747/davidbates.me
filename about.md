@@ -27,3 +27,9 @@ key: page-about
 ---
 
 欢迎来到我的博客，这里记录了我的生活和学术日常。
+
+#Tag介绍
+##生活
+https://chloecamphor.github.io/archive.html?tag=任是无情 在恋爱中挖掘自我的心路历程
+https://chloecamphor.github.io/archive.html?tag=坍塌的巴别塔 关于我的世界观、认识论，和一些或幽默或聪明的闲谈
+
