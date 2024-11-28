@@ -31,9 +31,9 @@ key: page-about
 # 标签介绍
 
 ## 我思故我在
-- [#任是无情]（https://chloecamphor.github.io/archive.html?tag=任是无情)
+- [#任是无情](https://chloecamphor.github.io/archive.html?tag=任是无情)
   - 在恋爱中挖掘自我的心路历程
-- [#坍塌的巴别塔] (https://chloecamphor.github.io/archive.html?tag=坍塌的巴别塔)
+- [#坍塌的巴别塔](https://chloecamphor.github.io/archive.html?tag=坍塌的巴别塔)
   - 关于我的世界观、认识论，和一些或幽默或聪明的闲谈
 
 ## 大脑食物
