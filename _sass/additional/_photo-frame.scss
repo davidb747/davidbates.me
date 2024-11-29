@@ -14,4 +14,10 @@
   img.circle, .circle > img {
     border-radius: 50%;
   }
+  img.cropped{
+    border-radius: 50%;
+    width: map-get($base, font-size-h4) * 10;
+    height: map-get($base, font-size-h4) * 10;
+    object-fit: cover;
+  }
 }
