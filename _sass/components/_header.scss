@@ -80,10 +80,22 @@
     @include media-breakpoint-down(md) {
       font-size: map-get($base, font-size-h4-small);
     }
+  & > img {
+    width: map-get($base, font-size-h4) * 10;
+    height: map-get($base, font-size-h4) * 10;
+    margin-right: map-get($spacers, 3);
+    vertical-align: middle;
+    margin-top: 1rem;
+    @include media-breakpoint-down(md) {
+      width: map-get($base, font-size-h4) * 1.2;
+      height: map-get($base, font-size-h4) * 1.2;
+    }
+    // background-color: #000;
   }
 }
+}
 
-.navigation {
+  .navigation {
   @include overflow(auto, "x");
   & > ul {
     height: map-get($layout, header-height);
