@@ -12,11 +12,11 @@
           {%- include snippets/get-nav-url.html path=_paths_root -%}
           {%- if site.title -%}
             <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">
-              <img src="{{ site.logo | default: 'assets/images/logo/logo.svg' }}" alt="Logo">
+              <img src="{{ site.url }}{{ site.baseurl }}/{{ site.logo | default: 'assets/images/logo/logo.svg' }}" alt="Logo">
               {{ site.title }}</a>
           {%- else -%}
             <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">
-                <img src="{{ site.logo | default: 'assets/images/logo/logo.svg' }}" alt="Logo">
+              <img src="{{ site.url }}{{ site.baseurl }}/{{ site.logo | default: 'assets/images/logo/logo.svg' }}" alt="Logo">
               </a>
           {%- endif -%}
         </div>
