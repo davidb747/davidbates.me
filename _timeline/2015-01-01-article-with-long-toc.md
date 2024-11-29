@@ -1,7 +1,8 @@
 ---
-title: Test - Article with Long TOC
+title: Test - Date 1
 key: 20150101
 tags: Test
+cover: /assets/images/cover2.jpg
 ---
 
 Article with long TOC.
@@ -10,58 +11,4 @@ Article with long TOC.
 
 ## TeXt Heading
 
-### TeXt Heading
-
-### TeXt Heading
-
-#### TeXt Heading
-
-##### TeXt Heading
-
-###### TeXt Heading
-
-### TeXt Heading
-
-## Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-## TeXt Heading
-
-### TeXt Heading
-
-### Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
-
-## TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-## TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### TeXt Heading
-
-### Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
-
-### TeXt Heading
-
-### TeXt Heading
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac erat ante.

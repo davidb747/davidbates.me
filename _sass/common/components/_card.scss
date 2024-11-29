@@ -37,6 +37,9 @@
     height: auto;
     border-radius: inherit;
   }
+  & > img--sm {
+    @extend .image--sm;
+  }
   & > .overlay {
     position: absolute;
     width: 100%;
@@ -99,5 +102,6 @@
   .card__content {
     padding-top: 0;
     padding-left: 0;
+    overflow: auto;
   }
 }
