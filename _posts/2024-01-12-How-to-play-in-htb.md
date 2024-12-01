@@ -30,6 +30,12 @@ sidebar:
 # How to play in hackthebox.com
 <!--more-->
 
+<style>
+  .page__header .header__brand path {
+    fill: rgba(255, 255, 255, .95);
+  }
+</style>
+
 ## Navigating to the Machines page
 
 You’ll need to navigate to the left-hand side menu and click on Labs, then Machines from yo>
