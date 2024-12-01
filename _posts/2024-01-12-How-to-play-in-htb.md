@@ -20,13 +20,6 @@ article_header:
     src: /assets/images/h4ck.jpg
 ---
 
-title: How to play in hackthebox.com
-aside:
-  toc: true
-sidebar:
-  nav: docs-en
----
-
 # How to play in hackthebox.com
 <!--more-->
 
