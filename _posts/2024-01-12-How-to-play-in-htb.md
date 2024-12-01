@@ -5,8 +5,6 @@ article_header:
   type: cover
   image:
     src: /assets/images/h4ck.jpg
-sidebar:
-  nav: docs-en
 front matter:
 layout: article
 title: Page - Sidebar
