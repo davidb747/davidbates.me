@@ -27,7 +27,7 @@ You’ll need to navigate to the left-hand side menu and click on Labs, then Mac
 This will take you to the Machines line-up page, where you can find all controls required for you to play the Machines. This includes VPN connection details and controls, Active and Retired Machines, a to-do list, and more.
 
  
-###Machine difficulties
+### Machine difficulties
 
 Machinescome in four separate difficulty levels; Easy, Medium, Hard, and Insane. 
 
@@ -38,7 +38,7 @@ They are named appropriately and have their own respective logo language:
  
 
  
-##VPN Server selection
+## VPN Server selection
 
 If you'd like to learn more about using the VPN ticketing system and subsequently connect to the labs to access the Machines, we have a dedicated article on the topic.
 
