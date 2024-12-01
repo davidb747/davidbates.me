@@ -3,3 +3,16 @@ header:
     url: /pages/quienes-somos
   - title: Linea del tiempo
     url : /pages/linea-del-tiempo
+  - title: Archivo
+    url: /archive
+timeline: 
+  - title: timeline
+    url: /pages/linea-del-tiempo
+    children:
+      - title: Suceso 1
+        url: /timeline/2020/03/06/suceso-1
+      - title: Suceso 2
+        url: /timeline/2020/03/12/suceso-2
+      - title: Suceso 3
+        url: /timeline/2020/03/15/suceso-3
+    

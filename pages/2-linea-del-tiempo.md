@@ -14,9 +14,7 @@ articles:
 
 ---
 
-Article list with grid layout.
-
-<!--more-->
-
+Línea de tiempo - Plan Nacional de Vacunación en Colombia
+Objetivo: Hacer una recopilación de los eventos más relevantes, modificaciones, ajustes y demás relacionados al PNV en Colombia, haciendo una comparación con las decisiones regulatorias y recomendaciones de la EMA, FDA y la OMS.
 
 </div>

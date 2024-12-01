@@ -21,10 +21,12 @@
 }
 
 .card__content {
-  padding: map-get($spacers, 2) map-get($spacers, 3);
+  padding: map-get($spacers, 2);
+
 }
 
 .card__header, .card__header > a {
+  padding: map-get($spacers, 2);
   @include link-colors($text-color-d, $main-color-1);
 }
 
@@ -80,6 +82,7 @@
 }
 
 .card--clickable {
+  padding: map-get($spacers, 2);
   cursor: pointer;
   @include hover() {
     @include box-shadow(2);
@@ -100,8 +103,8 @@
     }
   }
   .card__content {
-    padding-top: 0;
     padding-left: 0;
+    padding-top :0;
     overflow: auto;
   }
 }

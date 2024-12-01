@@ -232,6 +232,7 @@ plugins:
 collections:
   about:
     output: true
+    permalink: /:title
   timeline:
     output: true
-    permalink: /timeline/:name/
+    permalink: /timeline/:year/:month/:day/:title
