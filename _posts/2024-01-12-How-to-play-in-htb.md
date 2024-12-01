@@ -18,7 +18,7 @@ sidebar:
 How to play in hackthebox.com
 <!--more-->
 
-##Navigating to the Machines page
+##  Navigating to the Machines page
 
 You’ll need to navigate to the left-hand side menu and click on Labs, then Machines from your dashboard.
 
