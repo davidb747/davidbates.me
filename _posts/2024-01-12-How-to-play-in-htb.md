@@ -1,5 +1,5 @@
 ---
-title: Post with Header Image
+title: How to play in hackthebox.com
 tags: TeXt
 article_header:
   type: cover
