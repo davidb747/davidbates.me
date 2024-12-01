@@ -7,6 +7,13 @@ article_header:
     src: /assets/images/h4ck.jpg
 sidebar:
   nav: docs-en
+front matter:
+layout: article
+title: Page - Sidebar
+aside:
+  toc: true
+sidebar:
+  nav: docs-en
 ---
 
 How to play in hackthebox.com
