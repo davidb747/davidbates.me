@@ -150,12 +150,26 @@
       {%- endif -%}
     <li class=" timeline-item">
       <div class="card card--clickable timeline-item__description">
+        {%-  if _article.category == 'Efectividad'-%}
+          <i class="fas fa-star" style="color:greenyellow"></i>
+          <div style="display:inline;">{{_article.category}}</div>
+        {%- elsif _article.category == 'Seguridad'-%}
+          <i class="fas fa-star" style="color:coral"></i>
+          <div style="display:inline;">{{_article.category}}</div>
+        {%- elsif _article.category == 'Refuerzos'-%}
+          <i class="fas fa-star" style="color:crimson"></i>
+          <div style="display:inline;">{{_article.category}}</div>
+        {%- elsif _article.category == 'Variantes'-%}
+          <i class="fas fa-star" style="color:blueviolet"></i>
+          <div style="display:inline;">{{_article.category}}</div>
+
+        {%- endif -%}
+      <div class="card__content timeline-item-hidden">
         {%- if _article.cover -%}
           <img class="timeline-item__image img" src="{{ _article_cover }}" />
         {%- endif -%}
       <a href="{{ _article_url }}"><h2 class="timeline-item__header">{{ _article.title }}</h2></a>
       <div class="timeline-item__date">{{ _article.date | date: '%Y-%m-%d' }}</div>
-      <div class="card__content timeline-item-hidden">
         {%- if _article.excerpt -%}
           <div class="article__content">{{ _article.excerpt }}</div>
         {%- endif -%}
