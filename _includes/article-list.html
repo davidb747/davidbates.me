@@ -149,22 +149,20 @@
         {%- assign _date = _currentdate -%}
       {%- endif -%}
     <li class=" timeline-item">
-      <div class="card card--clickable timeline-item__description">
-        {%-  if _article.category == 'Efectividad'-%}
+      <div class="timeline-item__icon--clickable" >
+      {%-  if _article.category == 'Efectividad'-%}
           <i class="fas fa-star" style="color:greenyellow"></i>
-          <div style="display:inline;">{{_article.category}}</div>
         {%- elsif _article.category == 'Seguridad'-%}
           <i class="fas fa-star" style="color:coral"></i>
-          <div style="display:inline;">{{_article.category}}</div>
         {%- elsif _article.category == 'Refuerzos'-%}
           <i class="fas fa-star" style="color:crimson"></i>
-          <div style="display:inline;">{{_article.category}}</div>
         {%- elsif _article.category == 'Variantes'-%}
           <i class="fas fa-star" style="color:blueviolet"></i>
-          <div style="display:inline;">{{_article.category}}</div>
-
         {%- endif -%}
+      </div>
+      <div class="card timeline-item__description">
       <div class="card__content timeline-item-hidden">
+        <div style="display:inline;">{{_article.category}}</div>
         {%- if _article.cover -%}
           <img class="timeline-item__image img" src="{{ _article_cover }}" />
         {%- endif -%}
@@ -185,14 +183,20 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var buttons = document.querySelectorAll('.card--clickable');
+    var buttons = document.querySelectorAll('.timeline-item__icon--clickable');
     buttons.forEach(function(button) {
       button.addEventListener('click', function() {
-        var content = this.querySelector('.card__content');
+        var content = this.nextElementSibling.querySelector('.card__content');
         if (content.classList.contains('timeline-item-hidden')) {
           content.classList.remove('timeline-item-hidden');
+          var parentDiv  = content.parentElement;
+          parentDiv.classList.remove('move-left');
+          parentDiv.classList.add('move-right');
         } else {
           content.classList.add('timeline-item-hidden');
+          var parentDiv  = content.parentElement;
+          parentDiv.classList.remove('move-right');
+          parentDiv.classList.add('move-left');
         }
       });
     });

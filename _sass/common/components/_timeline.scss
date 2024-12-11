@@ -4,6 +4,13 @@
     @include flex-direction(column);
   }
 }
+.line {
+  position:absolute;
+  background-color: black;
+  transform-origin: top left;
+  transition: all 0.5s ease-in-out;
+  height: 10px;
+}
 .timeline-item__date {
   color: $text-color-l;
   font-size: map-get($base, font-size-sm);
@@ -40,8 +47,36 @@ a > .timeline-item__header, a.timeline-item__header, .timeline-item__header > a 
 .timeline-item__meta {
   color: $text-color-l;
 }
-
+.timeline-item__description.move-right {
+  transform: translateX(100%);
+}
+.timeline-item__description.move-left {
+  transform: translateX(0%);
+}
+.timeline-item__icon--clickable {
+  cursor: pointer;
+  border-radius: map-get($base, border-radius);
+  @include box-shadow();
+  @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
+  & > :first-child {
+    border-top-left-radius: map-get($base, border-radius);
+    border-top-right-radius: map-get($base, border-radius);
+  }
+  & > :last-child {
+    border-bottom-right-radius: map-get($base, border-radius);
+    border-bottom-left-radius: map-get($base, border-radius);
+  }
+  &:hover {
+    @include box-shadow(0 0 0 map-get($spacers, 1) $main-color-1);
+  }
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .timeline-item__description {
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.7s ease-in-out;
   &, .article__content {
     overflow: auto;
     font-size: map-get($base, font-size-sm);
