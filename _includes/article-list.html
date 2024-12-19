@@ -143,26 +143,34 @@
       {%- endif -%}
     {%- elsif include.type == 'timeline' -%}
     {%- assign _currentdate = _article.date | date: '%Y' -%}
+    {%- assign _currentmonthday = _article.date | date: '%m-%d' -%}
       {%- if _currentdate != _date -%}
         {%- unless forloop.first -%}</ul></section>{%- endunless -%}
-        <section><h2 class="article-list__group-header">{{ _currentdate }}</h2><ul class="timeline-items">
+        <section class="timeline-span"><h2 class="timeline-article-list__group-header">{{ _currentdate }}</h2><ul class="timeline-items-list">
         {%- assign _date = _currentdate -%}
       {%- endif -%}
+      {%-  if _article.category == 'Efectividad'-%}
+      {%- assign _color = 'color:greenyellow' -%}
+      {%- assign _background_color = 'background-color:greenyellow' -%}
+    {%- elsif _article.category == 'Seguridad'-%}
+      {%- assign _color = 'color:coral' -%}
+      {%- assign _background_color = 'background-color:coral' -%}
+    {%- elsif _article.category == 'Refuerzos'-%}
+      {%- assign _color = 'color:crimson' -%  }
+      {%- assign _background_color = 'color:crimson' -%}
+    {%- elsif _article.category == 'Variantes'-%}
+      {%- assign _color = 'color:blueviolet' -%}
+      {%- assign _background_color = 'background-color:blueviolet' -%}
+    {%- endif -%}
     <li class=" timeline-item">
       <div class="timeline-item__icon--clickable" >
-      {%-  if _article.category == 'Efectividad'-%}
-          <i class="fas fa-star" style="color:greenyellow"></i>
-        {%- elsif _article.category == 'Seguridad'-%}
-          <i class="fas fa-star" style="color:coral"></i>
-        {%- elsif _article.category == 'Refuerzos'-%}
-          <i class="fas fa-star" style="color:crimson"></i>
-        {%- elsif _article.category == 'Variantes'-%}
-          <i class="fas fa-star" style="color:blueviolet"></i>
-        {%- endif -%}
+        <i class="fas fa-star" style="{{_color}}"></i>
       </div>
-      <div class="card timeline-item__description">
+      <div class="line"><div class="vertical-line"></div></div>
+      <div class="specific-date">{{_currentmonthday}}</div>
+      <div class="card card--flat timeline-item__description">
+      <div class="timeline__tag timeline__tag--hidden" style="{{_background_color}}"><h1>{{_article.category}}</h1></div>
       <div class="card__content timeline-item-hidden">
-        <div style="display:inline;">{{_article.category}}</div>
         {%- if _article.cover -%}
           <img class="timeline-item__image img" src="{{ _article_cover }}" />
         {%- endif -%}
@@ -175,30 +183,10 @@
           <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
         {%- endif -%}
       </div>
-    </li>  
+    </div>  
+  </li>
     {%- endif -%}
   {%- endfor -%}
-
-</div>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var buttons = document.querySelectorAll('.timeline-item__icon--clickable');
-    buttons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        var content = this.nextElementSibling.querySelector('.card__content');
-        if (content.classList.contains('timeline-item-hidden')) {
-          content.classList.remove('timeline-item-hidden');
-          var parentDiv  = content.parentElement;
-          parentDiv.classList.remove('move-left');
-          parentDiv.classList.add('move-right');
-        } else {
-          content.classList.add('timeline-item-hidden');
-          var parentDiv  = content.parentElement;
-          parentDiv.classList.remove('move-right');
-          parentDiv.classList.add('move-left');
-        }
-      });
-    });
-  });
+  {%- include scripts/components/timeline.js -%}
 </script>
