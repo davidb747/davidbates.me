@@ -236,3 +236,6 @@ collections:
   timeline:
     output: true
     permalink: /timeline/:year/:month/:day/:title
+  herramientas:
+    output: true
+    permalink: /herramientas/:title

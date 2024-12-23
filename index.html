@@ -3,3 +3,16 @@ layout: home
 # articles:
 #   excerpt_type: html
 ---
+<h1>Proyecto ISUR</h1>
+{%- include extensions/youtube.html id='wbY97-hdD5c' -%}
+<h1>Linea del tiempo</h1>
+<div>
+    {%- include article-list.html articles=site.timeline type='timeline'  -%}
+</div>
+<h1>Organizaciones involucradas</h1>
+    <div>
+        {%- include article-list.html articles=site.about type='grid' show-excerpt = true -%}
+    </div>
+<script>
+    {%- include scripts/components/timeline.js -%}
+</script>

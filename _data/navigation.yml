@@ -5,6 +5,8 @@ header:
     url : /pages/linea-del-tiempo
   - title: Archivo
     url: /archive
+  - title : Herramientas
+    url : /pages/herramientas
 timeline: 
   - title: timeline
     url: /pages/linea-del-tiempo
