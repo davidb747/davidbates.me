@@ -11,8 +11,8 @@ layout: home
 </div>
 <h1>Organizaciones involucradas</h1>
     <div>
-        {%- include article-list.html articles=site.about type='grid' show-excerpt = true -%}
+        {%- include article-list.html articles=site.organizaciones type='item' show_excerpt=true show_cover=true-%}
     </div>
 <script>
-    {%- include scripts/components/timeline.js -%}
+        {%- include scripts/components/timeline.js -%}
 </script>

@@ -1,12 +1,16 @@
 header:
-  - title: Quiénes Somos
-    url: /pages/quienes-somos
-  - title: Linea del tiempo
-    url : /pages/linea-del-tiempo
-  - title: Archivo
-    url: /archive
+  - title: Home
+    url: /
+  # - title: Linea del tiempo
+  #   url : /pages/linea-del-tiempo
+  # - title: Archivo
+  #   url: /archive
   - title : Herramientas
     url : /pages/herramientas
+  - title : Investigación
+    url : /pages/investigacion
+  - title : Blog
+    url : /pages/blog
 timeline: 
   - title: timeline
     url: /pages/linea-del-tiempo
