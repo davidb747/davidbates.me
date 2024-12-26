@@ -242,3 +242,6 @@ collections:
   organizaciones:
     output: true
     permalink: /organizaciones/:title
+  investigacion:
+    output: true
+    permalink: /investigacion/:title

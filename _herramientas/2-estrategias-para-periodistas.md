@@ -1,12 +1,12 @@
 ---
 layout: article
-title: Estrategias para docentes
+title: Estrategias para periodistas
 permalink: /page/single.html
 key: page-single
 cover: /assets/images/cover1.jpg
 tags: 
     - Estrategias
-    - Docentes
+    - Periodistas
 ---
 
 ## Introducción
