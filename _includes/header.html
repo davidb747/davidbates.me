@@ -13,7 +13,7 @@
           {%- if site.title -%}
             <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">
               <img src="{{ site.url }}{{ site.baseurl }}/{{ site.logo | default: 'assets/images/logo/logo.svg' }}" alt="Logo">
-              {{ site.title }}</a>
+              </a>
           {%- else -%}
             <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">
               <img src="{{ site.url }}{{ site.baseurl }}/{{ site.logo | default: 'assets/images/logo/logo.svg' }}" alt="Logo">
