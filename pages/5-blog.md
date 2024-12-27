@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Blog
-permalink: /pages/blog.html
+permalink: /pages/blog
 key: blog
 cover: /docs/assets/images/axure/articles-grid.jpg
 articles:

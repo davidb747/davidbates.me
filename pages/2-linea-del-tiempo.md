@@ -1,7 +1,7 @@
 ---
 layout: timeline
 title: Linea del tiempo
-permalink: /pages/linea-del-tiempo.html
+permalink: /pages/linea-del-tiempo
 key: articles-grid
 cover: /assets/images/axure/cover1.jpg
 articles:

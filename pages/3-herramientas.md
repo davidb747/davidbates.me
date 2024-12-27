@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Caja de Herramientas
-permalink: /pages/herramientas.html
+permalink: /pages/herramientas
 key: toolbox
 cover: /docs/assets/images/axure/articles-item-cover-excerpt-readmore-info.jpg
 articles:

@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Investigación
-permalink: /pages/investigacion.html
+permalink: /pages/investigacion
 key: articles-grid
 cover: /assets/images/axure/cover1.jpg
 articles:

@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Quienes Somos
-permalink: /pages/quienes-somos.html
+permalink: /pages/quienes-somos
 key: articles-grid
 cover: /assets/images/axure/cover1.jpg
 articles:

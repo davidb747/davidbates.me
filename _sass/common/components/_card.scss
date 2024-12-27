@@ -97,6 +97,10 @@
 
 .card--flat {
   @include box-shadow(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   .card__image {
     & > img {
       border-radius: map-get($base, border-radius);
