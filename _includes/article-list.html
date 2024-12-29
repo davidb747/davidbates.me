@@ -131,7 +131,7 @@
         <div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat">
             {%- if _article.cover -%}
-            <img class="image image--sm" src="{{ _article_cover }}" />
+            <img class="image image--lg" src="{{ _article_cover }}" />
             {%- endif -%}
               <div class="card__content">
                 <header>
@@ -163,8 +163,8 @@
       {%- assign _background_color = 'background-color:blueviolet' -%}
     {%- endif -%}
     <li class=" timeline-item">
-      <div class="timeline-item__icon--clickable" >
-        <i class="fas fa-star" style="{{_color}}"></i>
+      <div class="timeline-item__icon--clickable" style="{{_background_color}}" >
+        <i class="fas fa-star" style="color:white;"></i>
       </div>
       <div class="line"><div class="vertical-line"></div></div>
       <div class="specific-date">{{_currentmonthday}}</div>
