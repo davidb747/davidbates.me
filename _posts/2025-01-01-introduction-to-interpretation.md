@@ -1,10 +1,16 @@
 ---
+layout: article
 title: Introduction to Interpretation
-tags: Philosophy
-
+tags: Philosophy Introduction
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#3e758f'
+  background_image: false
 ---
 
 ## What is interpretation? 
+<!--more-->
 
 Interpretation is our gateway to reality. Everything we percieve and understand about the world arises from our capacity to interpret and make meaning from it. Our eyes turn light into cars, books and other people. Our ears turn wave perturbations into music, laughter, and conversation. Each of these involves a transformation from that which is raw and unprocessed into that which is useful and meaningful to us.
 
