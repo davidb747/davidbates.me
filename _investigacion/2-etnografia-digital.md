@@ -6,7 +6,7 @@ key: page-article-header-overlay-background-image-HB
 cover: /assets/images/cover3.jpg
 tags : 
     - etnografia digital
-excerpt : La organización se encarga de ..
+excerpt : Análisis de contenido multimedia sobre vacunación COVID-19 en plataformas digitales, rastreando fuentes y prácticas clave en salud pública.
 header:
   theme: dark
   background: 'linear-gradient(135deg, rgb(47,84,151), rgb(143,170,217))'
@@ -28,8 +28,4 @@ article_header:
   }
 </style>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris
+Esta área recolecta, estructura y analiza todo tipo de contenido multimedia relacionado con la vacunación contra la Covid-19 en plataformas como Youtube, Facebook, Twitter, y Whatsapp sobre la vacunación contra la COVID-19. Con el apoyo de herramientas de software libre se rastrean las fuentes, orígenes, latitudes y prácticas de comunicación de actores que se encuentran en una posición clave para conectar la gente alrededor de temas de salud pública.  

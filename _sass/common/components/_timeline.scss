@@ -176,15 +176,15 @@ a > .timeline-item__header, a.timeline-item__header, .timeline-item__header > a 
   background: 
     repeating-linear-gradient(
       to bottom,
-      #dce3e9,         /* Line color */
-      #dce3e9 2px,     /* Line thickness */
+      #e7e7e7,         /* Line color */
+      #ebebeb 2px,     /* Line thickness */
       transparent 1px, /* Transparent gap */
-      transparent 90px /* Total line spacing */
+      transparent 100px /* Total line spacing */
     ),
     linear-gradient(
       to bottom,       /* Direction of the gradient */
-      #d4e7f3 8%,
-      #f0f8fd 25%,         /* Top color */
+      #e5f4fc 8%,
+      #f5fafd 25%,         /* Top color */
       white          /* Bottom color */
     );   
   padding: 10px 0px 10px 0px;
