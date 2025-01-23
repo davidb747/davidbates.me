@@ -5,8 +5,8 @@ permalink: /page/single.html
 key: page-single
 cover: /assets/images/cover1.jpg
 tags: 
-    - Estrategias
-    - Docentes
+    [Estrategias,
+    Docentes]
 ---
 
 ## Introducción
