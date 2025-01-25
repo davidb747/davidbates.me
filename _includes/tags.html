@@ -1,7 +1,13 @@
 {%- assign _tag_max_size = 1 -%}
 {%- assign _tag_min_size = 1 -%}
 {%- assign _tag_cur_size = 1 -%}
-{%- assign _tags = site.tags | sort -%}
+{%- assign _timeline_tags = site.timeline | map: 'tags' | join: ','  | split: ',' | uniq | sort -%}
+{%- assign _about_tags = _tags | concat: site.about | map: 'tags' | join: ',' | split: ',' | uniq | sort -%}  
+{%- assign _post_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort -%}
+{%- assign _herramientas_tags = site.herramientas | map: 'tags' | join: ',' | split: ',' | uniq | sort -%}
+{%- assign _investigacion_tags = site.investigacion | map: 'tags' | join: ',' | split: ',' | uniq | sort -%}
+{%- assign _organizaciones_tags = site.organizaciones | map: 'tags' | join: ',' | split: ',' | uniq | sort -%}
+{%- assign _tags = _timeline_tags | concat: _post_tags | concat: _about_tags |concat: _herramientas_tags | concat: _investigacion_tags | concat: _organizaciones_tags | uniq | sort -%}
 {%- for _tag in _tags -%}
   {%- assign _tag_cur_size = _tag[1].size -%}
   {%- if _tag_cur_size > _tag_max_size -%}
@@ -19,7 +25,7 @@
   <ul class="menu">
     <li>
       <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="">
-        Show All<div class="tag-button__count">{{ site.posts | size }}</div>
+        Show All<div class="tag-button__count">{{ _tags | size }}</div>
       </button>
     </li>
     {%- for _tag in _tags -%}
@@ -43,8 +49,15 @@
       {%- else -%}
         {%- assign _c_index = 4 -%}
       {%- endif -%}
-      <li><button type="button" class="button button--pill tag-button tag-button-{{ _c_index }}" data-encode="{{ _tag[0] | strip | url_encode }}">
-          <span>{{ _tag[0] | strip }}</span><div class="tag-button__count">{{ _tag[1].size }}</div>
+      {%- assign _tag_count = 0 -%}
+      {%- assign _articles = site.timeline | concat: site.posts | concat :  site.about | concat : site.herramientas |concat : site.investigacion | concat: site.organizaciones-%}
+      {%- for _article in _articles -%}
+        {%- if _article.tags contains _tag -%}
+          {%- assign _tag_count = _tag_count | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+      <li><button type="button" class="button button--pill tag-button tag-button-{{ _c_index }}" data-encode="{{ _tag | strip | url_encode }}">
+          <span>{{ _tag | strip }}</span><div class="tag-button__count">{{ _tag_count}}</div>
         </button>
       </li>
     {%- endfor -%}

@@ -3,3 +3,40 @@ layout: home
 # articles:
 #   excerpt_type: html
 ---
+<div class="items">
+    <h1>Proyecto ISUR</h1>
+    <p> 
+        El Centro de Internet y Sociedad de la Universidad del Rosario (ISUR) es un espacio interdisciplinario de investigación y formación que trabaja con perspectiva de interés público y derechos humanos en problemáticas relacionadas con los desafíos sociales que plantean los cambios tecnológicos. ISUR busca generar mayor conocimiento sobre internet y mejores prácticas por parte de empresas y Estados, que promuevan el respeto de los derechos humanos, el empoderamiento tecnológico y la democratización del conocimiento y la información en Colombia y en Latinoamérica.
+    </p>
+    <p>
+        El Centro acoge a estudiantes e investigadores interesados en consolidar proyectos académicos, de formación y de incidencia, que aborden el desarrollo tecnológico desde una perspectiva social y humana, conectada con la visión del sur global. Desde este espacio se discuten, reflexionan y articulan estrategias que permitan empoderar comunidades mediante el uso de la tecnología, proveer insumos para la participación en los debates más importantes sobre el desarrollo de la industria digital y propiciar la creación de vínculos interinstitucionales, nuevos diálogos, aprendizajes y nuevos cuestionamientos en este campo.
+    </p>
+    <p>
+    La plataforma de ISUR es un punto de encuentro para diferentes audiencias interesadas en estas problemáticas, por lo que también está abierta para conocer, asesorar y/o apoyar propuestas de líderes sociales y comunitarios, activistas y de otros individuos, que se encuentren alineadas con los objetivos y principios de su gestión. ISUR desarrolla diversas actividades enfocadas en abordar de manera crítica los desafíos implícitos en el uso de las tecnologías de la información. Los tres ejes que guían su trabajo son: investigación, incidencia y formación.
+    </p>
+    <a href="https://centroisur.co/quienessomos/" target="_blank">Sitio web de ISUR</a>
+    {%- include extensions/youtube.html id='wbY97-hdD5c' -%}
+</div>
+<div class="items">
+    <h1>Linea del tiempo - Plan Nacional de Vacunación en Colombia</h1>
+    <p>
+        Una recopilación de los eventos más relevantes, modificaciones, ajustes y otros aspectos relacionados con el Plan Nacional de Vacunación en Colombia, comparados con las decisiones regulatorias y recomendaciones de la EMA, FDA y la OMS.
+    </p>
+    <div>
+        {%- include article-list.html articles=site.timeline type='timeline'  -%}
+    </div>
+</div>
+<h1>Organizaciones involucradas</h1>
+    <p>
+        Estas son algunas de las organizaciones que han participado en el proyecto.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.s
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+    </p>
+    <div>
+        {%- include article-list.html articles=site.organizaciones type='item' show_excerpt=true show_cover=true-%}
+    </div>
+<script>
+        {%- include scripts/components/timeline.js -%}
+</script>
