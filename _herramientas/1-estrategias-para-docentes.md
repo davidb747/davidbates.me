@@ -15,7 +15,7 @@ Estrategias bla bla
 
 ## Estrategia 1: Aprendizaje Colaborativo
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, nisl sit amet facilisis tincidunt, justo erat fermentum libero
+Mongo es muy bonito Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, nisl sit amet facilisis tincidunt, justo erat fermentum libero
 
 
 
