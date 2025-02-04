@@ -1,13 +1,13 @@
 ---
-layout: article
-title: Page - Article Header Overlay Background Image
+# layout: article
+title: Analyzing 200.000 Chess Games
 article_header:
   type: overlay
   theme: dark
-  background_color: '#203028'
+#   background_color: '#203028'
   background_image:
-    # gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /docs/assets/images/chess-set-article-cover.jpg
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/chess-set-article-cover.jpg
 ---
 
 Openings are divided into many subvariations, of which there are too many to analyse them all now. Because of that I wanted to condense most of the subvariations into their main openings, and then look at the win rates of the 20 that were most commonly played in the dataset.
