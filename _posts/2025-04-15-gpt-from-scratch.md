@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: articles
 title: "Colab에서 GPT-2를 처음부터 구현해보기"
 tags: [GPT, PyTorch, Colab]
 ---
