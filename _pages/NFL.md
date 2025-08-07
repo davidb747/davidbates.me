@@ -1,7 +1,7 @@
 ---
 permalink: /nfl/
 title: "NFL"
-layout: single
+layout: page
 ---
 
 I have a lot of plans with the NFL, including Elo ranking systems, machine learning models, and in-depth statistical analysis as I go.
