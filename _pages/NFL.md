@@ -1,4 +1,5 @@
 ---
+layour: article
 permalink: /nfl/
 title: "NFL"
 mode: immersive
