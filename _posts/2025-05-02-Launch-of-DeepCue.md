@@ -2,8 +2,10 @@
 title: "Launch of DeepCue"
 date: 2025-05-02T12:00:00-00:00
 categories:
+  - Snooker
   - DeepCue
 tags:
+  - Snooker
   - DeepCue
   - Prediction
   - David Bates
