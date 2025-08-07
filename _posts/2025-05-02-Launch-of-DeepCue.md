@@ -19,9 +19,6 @@ tags:
 ---
 
 <h2>DeepCue: Zhao Xintong will WIN the World Snooker Championship</h2>
-<small><em>~3 min read</em></small>
-
----
 
 This week, I gave myself a 48-hour challenge:
 
