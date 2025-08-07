@@ -8,7 +8,7 @@ article_header:
   background_color: '#203028'
   background_image:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /docs/assets/images/american_football_data_science.png
+    src: /assets/images/american_football_data_science.png
 ---
 
 I have a lot of plans with the NFL, including Elo ranking systems, machine learning models, and in-depth statistical analysis as I go.
