@@ -18,7 +18,14 @@ I'm a Physics graduate from **Imperial College London**, specialising in **data 
 
 Have a read through some of my recent posts and project breakdowns below.
 
-{% include section-articles.html %}
+{% for post in site.posts limit:5 %}
+  <article>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt }}</p>
+    <small><em>{{ post.date | date: "%B %d, %Y" }}</em></small>
+  </article>
+{% endfor %}
+
 
 ---
 
