@@ -5,8 +5,6 @@ categories:
   - Snooker
   - DeepCue
   - Prediction
-  - Machine Learning
-  - David Bates
 tags:
   - DeepCue
   - Snooker
