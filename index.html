@@ -4,32 +4,33 @@ title: "Home"
 permalink: /
 ---
 
-# Hi, I'm David Bates
+<h1>Hi, I'm David Bates</h1>
 
 I'm a Physics graduate from **Imperial College London**, specialising in **data science**, **analytics**, and **statistical modelling** — particularly applied to **sports and real-world decision-making**.
 
 <p align="center">
   <img src="/assets/images/bio-photo.jpeg" alt="David Bates" width="200px" style="border-radius: 50%;">
 </p>
+<hr>
 
 ---
 
-## 📊 Recent Analysis
+<h2>📊 Recent Analysis</h2>h2>
 
 Have a read through some of my recent posts and project breakdowns below.
 
 {% for post in site.posts limit:5 %}
   <article>
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p>{{ post.excerpt }}</p>
+    {{ post.excerpt | strip_html | truncatewords: 30 }}
     <small><em>{{ post.date | date: "%B %d, %Y" }}</em></small>
   </article>
 {% endfor %}
 
-
+<hr>
 ---
 
-## 💼 Looking for Work
+<h2>💼 Looking for Work</h2>
 
 I'm currently open to **data science** and **consulting roles**, especially those involving:
 
