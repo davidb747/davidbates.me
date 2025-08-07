@@ -25,4 +25,3 @@ Key players are highlighted:
 </p>
 
 **Warning:** All initial ratings start at 0. There is a **learning period** before ratings become reliable — both for new QBs entering the league and during the early seasons shown in the plot.
-{: .notice--warning}
