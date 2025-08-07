@@ -225,3 +225,19 @@ plugins:
 
 include:
   - _pages
+
+footer:
+  since: 2025
+  copyright:
+    owner: "David Bates"
+  links:
+    - title: GitHub
+      url: https://github.com/davidb747
+      icon: fab fa-github
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/david-bates-1545ab250/
+      icon: fab fa-linkedin
+    - title: Email
+      url: mailto:contact@davidbates.me
+      icon: fas fa-envelope
+
