@@ -18,7 +18,7 @@ tags:
   - David Bates
 ---
 
-<h2>DeepCue: Zhao Xintong will WIN the World Snooker Championship</h2>
+### DeepCue: Zhao Xintong will WIN the World Snooker Championship
 
 This week, I gave myself a 48-hour challenge:
 
