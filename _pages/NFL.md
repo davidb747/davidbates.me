@@ -2,9 +2,6 @@
 layout: article
 permalink: /nfl/
 title: "NFL"
-mode: immersive
-header:
-  theme: dark
 article_header:
   type: cover
   image:
