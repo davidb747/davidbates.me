@@ -1,13 +1,11 @@
 ---
 permalink: /nfl/
 title: "NFL"
-layout: article
-article_header:
-  type: overlay
+mode: immersive
+header:
   theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+article_header:
+  type: cover
     src: /assets/images/american_football_data_science.png
 ---
 
