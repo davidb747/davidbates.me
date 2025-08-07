@@ -14,10 +14,10 @@ Here's an example of how my analysis ranks NFL quarterbacks by converting **EPA 
 Only quarterbacks with **more than 10 snaps** in a match are included in the update.
 
 Key players are highlighted:
-- Tom Brady (<span style="color:orange;">orange</span>)
-- Aaron Rodgers (<span style="color:red;">red</span>)
-- Patrick Mahomes (<span style="color:blue;">blue</span>)
-- Brock Purdy (<span style="color:pink;">pink</span>)
+  - Tom Brady (<span style="color:orange;">orange</span>)
+  - Aaron Rodgers (<span style="color:red;">red</span>)
+  - Patrick Mahomes (<span style="color:blue;">blue</span>)
+  - Brock Purdy (<span style="color:pink;">pink</span>)
 
 <p align="center">
   <img src="/assets/images/qb_elo_fig.png" alt="Quarterback Elo Ratings since 1999" width="90%">
