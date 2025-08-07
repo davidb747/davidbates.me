@@ -1,7 +1,6 @@
 ---
 permalink: /nfl/
 title: "NFL"
-subtitle: "NFL Elo rating, data analysis, and machine learning model."
 layout: single
 ---
 
