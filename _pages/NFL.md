@@ -9,7 +9,7 @@ I have a lot of plans with the NFL, including Elo ranking systems, machine learn
 
 ---
 
-### NFL QB Ratings Examples
+### NFL QB Ratings Example
 
 Here's an example of how my analysis ranks NFL quarterbacks by converting **EPA per attempt** during a match into an Elo-style rating.
 
