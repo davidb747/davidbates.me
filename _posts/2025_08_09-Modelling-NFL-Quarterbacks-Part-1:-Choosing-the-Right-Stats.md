@@ -62,4 +62,6 @@ Each of these metrics captures a different part of a quarterback’s game. Taken
 
 ---
 
+### What's Next?
+
 These stats form the foundation of my quarterback model — but raw metrics alone don’t tell the full story. In my next article, I’ll show how I combine them into a rating system that lets us compare QBs across games, opponents, and even seasons.
