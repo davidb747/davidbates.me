@@ -16,9 +16,7 @@ categories:
   - Quarterbacks
   - NFL
   - Ratings
-permalink: /nfl/ratings/qb-modelling-part-1/
 date: 2025-08-09T12:00:00-00:00
-image: /assets/images/qb_modelling_part1_cover.png
 ---
 
 ### How I Model NFL Quarterbacks
