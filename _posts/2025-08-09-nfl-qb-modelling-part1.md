@@ -22,6 +22,8 @@ series: "Modelling NFL Quarterbacks"
 image: /assets/images/qb_modelling_part1_cover.png
 ---
 
+![Modelling NFL Quarterbacks cover image](/assets/images/qb_modelling_cover.png)
+
 _This is the first post in my “Modelling NFL Quarterbacks” series, where I break down the process from picking stats to building ratings._
 
 ### How I Model NFL Quarterbacks
