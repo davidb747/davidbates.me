@@ -1,5 +1,6 @@
 ---
 title: "Modelling NFL Quarterbacks – Part 1: Choosing the Right Stats"
+description: "Part 1 of my NFL quarterback modelling series. Discover which stats matter most, why box-score numbers can mislead, and how I build data-driven QB comparisons."
 tags:
   - NFL
   - Quarterbacks
@@ -14,8 +15,10 @@ categories:
   - Quarterbacks
   - NFL
   - Ratings
-date: 2025-08-09T12:00:00-00:00
+date: 2025-08-09 12:00:00 +0000
+permalink: /nfl-qb-modelling-part1/
 ---
+
 
 ### How I Model NFL Quarterbacks
 When you watch an NFL game, it’s easy to get caught up in the big throws, the touchdowns, and the highlight-reel yardage. But these surface-level stats only give us hints toward the question I’m trying to answer:
