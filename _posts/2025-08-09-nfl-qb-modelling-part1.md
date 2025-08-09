@@ -1,5 +1,5 @@
 ---
-title: "Modelling NFL Quarterbacks – Part 1: Choosing the Right Stats"
+title: "Modelling NFL Quarterbacks: Choosing the Right Stats"
 description: "Part 1 of my NFL quarterback modelling series. Discover which stats matter most, why box-score numbers can mislead, and how I build data-driven QB comparisons."
 tags:
   - NFL
@@ -17,6 +17,7 @@ categories:
   - Ratings
 date: 2025-08-09 12:00:00 +0000
 permalink: /nfl-qb-modelling-part1/
+series: "Modelling NFL Quarterbacks"
 ---
 
 
