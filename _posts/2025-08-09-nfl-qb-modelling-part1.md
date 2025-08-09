@@ -10,6 +10,7 @@ tags:
   - QB Stats
   - NFL Stats
   - Quarterback Ranking
+  - David Bates
 categories:
   - American Football
   - Quarterbacks
