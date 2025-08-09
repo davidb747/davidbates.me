@@ -21,7 +21,7 @@ date: 2025-08-09T12:00:00-00:00
 image: /assets/images/qb_modelling_part1_cover.png
 ---
 
-##How I Model NFL Quarterbacks
+### How I Model NFL Quarterbacks
 When you watch an NFL game, it’s easy to get caught up in the big throws, the touchdowns, and the highlight-reel yardage. But these surface-level stats only give us hints toward the question I’m trying to answer:
 
 How good is this quarterback? Or, perhaps more importantly: Which quarterback is better?
@@ -34,7 +34,7 @@ For me, the answer starts with data — every pass, scramble, sack, and intercep
 
 ---
 
-##Where Does the Data Come From?
+### Where Does the Data Come From?
 My quarterback model starts with one of the richest resources in American football analytics: play-by-play data. Every snap is recorded — the down, distance, players on the field, result of the play, and more. This means I’m not relying on biased game summaries or my interpretation of highlight clips; I’m looking at the quantitative building blocks of the performance we see on our screens.
 
 Before the fun part begins, there’s a lot of cleaning to do — and a lot of sifting through what’s irrelevant. (No, the exact time to the second that the play occurred isn’t going to help my models — but whether the game was in primetime might.) Plays like kneels, spikes, and meaningless garbage-time snaps are stripped out so they don’t distort the picture. I also set a minimum snap count — because while the Philly Special was a Super Bowl-winning play, Trey Burton probably doesn’t need to be in my QB rankings.
@@ -43,7 +43,7 @@ Once that’s done, I can build a dataset that’s no longer just raw numbers (y
 
 ---
 
-##The Stats That Matter
+### The Stats That Matter
 Once the data is cleaned, the next step is deciding which numbers actually tell us something useful. Not every stat is created equal — some look good in a game summary but collapse under scrutiny. My goal is to choose metrics that not only describe performance, but do so in a way that allows for fair comparison — whether that’s adjusting for the strength of the defence or directly measuring one quarterback against another.
 
 Here are the core stats I use:
