@@ -28,6 +28,8 @@ show_author: true
 
 _This is the first post in my “Modelling NFL Quarterbacks” series, where I break down the process from picking stats to building ratings._
 
+<!--more-->
+
 ### How I Model NFL Quarterbacks
 When you watch an NFL game, it’s easy to get caught up in the big throws, the touchdowns, and the highlight-reel yardage. But these surface-level stats only give us hints toward the question I’m trying to answer:
 
