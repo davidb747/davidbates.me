@@ -32,28 +32,36 @@
           {%- include snippets/get-nav-url.html path=page.url -%}
           {%- assign _page_url = __return -%}
           {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
-
-          {%- assign _active = (_nav_url == _page_url) or (page.nav_key and _item.key and page.nav_key == _item.key) -%}
+        
           {%- assign has_children = _item.children and _item.children.size > 0 -%}
-
-          <li class="navigation__item{% if _active %} navigation__item--active{% endif %}{% if has_children %} has-children{% endif %}">
-            <a class="navigation__link" href="{{ _nav_url }}">
-              {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
-            </a>
-
-            {%- if has_children -%}
-              <ul class="dropdown" aria-label="{{ _item.title | default: __return }} submenu">
-                {%- for child in _item.children -%}
-                  {%- include snippets/get-nav-url.html path=child.url -%}
-                  {%- assign _child_url = __return -%}
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="{{ _child_url }}">{{ child.title }}</a>
-                  </li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </li>
+        
+          {%- comment -%}
+          Use TeXt’s original active logic exactly, so only ONE item lights up.
+          {%- endcomment -%}
+          {%- if _nav_url == _page_url or (page.nav_key and _item.key and page.nav_key == _item.key) -%}
+            <li class="navigation__item navigation__item--active{% if has_children %} has-children{% endif %}">
+          {%- else -%}
+            <li class="navigation__item{% if has_children %} has-children{% endif %}">
+          {%- endif -%}
+        
+              <a class="navigation__link" href="{{ _nav_url }}">
+                {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
+              </a>
+        
+              {%- if has_children -%}
+                <ul class="dropdown" aria-label="{{ _item.title | default: __return }} submenu">
+                  {%- for child in _item.children -%}
+                    {%- include snippets/get-nav-url.html path=child.url -%}
+                    {%- assign _child_url = __return -%}
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="{{ _child_url }}">{{ child.title }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
         {%- endfor -%}
+
 
         {%- if site.search.provider -%}
           <li class="navigation__item">
