@@ -9,4 +9,6 @@ The goal is for ratings to update after each match, reflecting the result of the
 
 The ratings will be a complex variant of an Elo model - taking into consideration every aspect of a quarterbacks play.
 
-_I am currently working on this and expect an MVP to be published by 13th August"_
+---
+
+_I am currently working on this and expect an MVP to be published by 13th August_
