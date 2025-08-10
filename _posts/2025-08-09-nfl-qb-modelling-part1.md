@@ -21,6 +21,7 @@ permalink: /nfl-qb-modelling-part1/
 series: "Modelling NFL Quarterbacks"
 cover: /assets/images/qb_modelling_part1_cover.png
 image: /assets/images/qb_modelling_part1_cover.png
+show_author: true
 ---
 
 ![Modelling NFL Quarterbacks cover image](/assets/images/qb_modelling_part1_cover.png)
