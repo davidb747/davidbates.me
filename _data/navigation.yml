@@ -6,11 +6,13 @@ header:
     children:
       - title: "NFL Posts"
         url: /nfl/archives/
-  - title: "DeepCue"
-    url: /deepcue/
+  - title: "Snooker"
+    url: /snooker/
     children:
-      - title: "DeepCue Posts"
-        url: /deepcue/archives/
+      - title: "DeepCue"
+        url: /deepcue/
+      - title: "Snooker Posts"
+        url: /snooker/archives/
   - title: "CV"
     url: /cv/
   - title: "About"
