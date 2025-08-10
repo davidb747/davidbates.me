@@ -8,7 +8,7 @@ article_header:
     src: /assets/images/american_football_data_science.png
 ---
 
-I have a lot of plans with the NFL, including Elo ranking systems, machine learning models, and in-depth statistical analysis as I go.
+I have a lot of plans with the NFL, including Elo ranking systems, machine learning models, and in-depth statistical analysis as I go. :)
 
 
 ### NFL QB Ratings Examples
