@@ -1,0 +1,28 @@
+.navigation ul li.has-children {
+  position: relative;
+}
+
+.navigation ul li.has-children .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.navigation ul li.has-children:hover .dropdown {
+  display: block;
+}
+
+.dropdown__item a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.dropdown__item a:hover {
+  background: #f5f5f5;
+}
