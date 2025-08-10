@@ -3,6 +3,9 @@ header:
     url: /
   - title: "NFL"
     url: /nfl/
+    children:
+      - title: "NFL Posts"
+        url: /nfl/archives
   - title: "DeepCue"
     url: /deepcue/
   - title: "CV"
