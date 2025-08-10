@@ -240,4 +240,8 @@ footer:
     - title: Email
       url: mailto:contact@davidbates.me
       icon: fas fa-envelope
+  
+custom_css:
+  - /assets/css/custom.css
+
 
