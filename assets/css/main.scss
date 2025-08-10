@@ -51,50 +51,75 @@
   "custom"; // <-- important: semicolon ends the import list
 
 /* Your dropdown styles */
+/* Elevate header/nav above content and prevent clipping */
+.header,
+.header .main,
+.navigation { position: relative; z-index: 4000; }
+.navigation ul li.has-children .dropdown { z-index: 5000; }
+.header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
+
+/* Dropdown basics */
 .navigation ul li.has-children { position: relative; }
-.navigation ul li.has-children .dropdown {
+.navigation .has-children > .navigation__link {
+  display: inline-block;
+  padding-bottom: .75rem; /* bigger hover area to avoid gaps */
+}
+
+/* Submenu panel */
+.navigation ul li.has-children > .dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* flush to parent */
   left: 0;
-  background: white; /* consider using a theme var here */
-  border: 1px solid #ddd;
   min-width: 200px;
-  z-index: 1000;
+  background: var(--card-background, #fff);
+  border: 1px solid var(--divider, #ddd);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border-radius: .5rem;
+  padding: .25rem 0;
+  margin: 0; list-style: none;
 }
-.navigation ul li.has-children:hover .dropdown { display: block; }
-.dropdown__item a { display: block; padding: 0.5rem 1rem; text-decoration: none; }
-.dropdown__item a:hover { background: #f5f5f5; }
 
-/* Make sure the header and nav sit above content */
-.header { position: relative; z-index: 2000; }            /* or header--dark/light too */
-.navigation { position: relative; z-index: 2100; }
-.navigation ul li.has-children .dropdown { z-index: 2200; }
-
-/* Prevent clipping */
-.header, .header .main, .navigation, .navigation ul { overflow: visible; }
-
-/* Keep open when focusing via keyboard and while hovering the dropdown itself */
+/* Show on hover and keyboard focus */
 .navigation ul li.has-children:hover > .dropdown,
 .navigation ul li.has-children:focus-within > .dropdown { display: block; }
 
-/* Remove gaps: ensure submenu touches the parent */
-.navigation ul li.has-children { position: relative; }
-.navigation ul li.has-children > .dropdown {
-  position: absolute;
-  top: 100%;      /* flush against the parent; no margin-top here */
-  left: 0;
-}
-
-/* Optional: tiny invisible bridge to prevent flicker if there’s still a gap */
+/* Hover bridge (prevents flicker when moving into submenu) */
 .navigation ul li.has-children::after {
   content: "";
   position: absolute;
   left: 0; right: 0;
   top: 100%;
-  height: 8px;    /* adjust if needed */
+  height: 8px;
+  pointer-events: none;
 }
 
-.navigation .has-children > a { padding-bottom: .75rem; }
+/* Items */
+.dropdown__item { white-space: nowrap; }
+.dropdown__link {
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.25;
+}
+.dropdown__link:hover,
+.dropdown__link:focus {
+  background: var(--card-hover, #f5f5f5);
+  outline: none;
+  border-radius: .25rem;
+}
+
+/* Optional: subtle focus ring consistent with theme buttons */
+.navigation a:focus {
+  outline: 2px solid rgba(0,0,0,.2);
+  outline-offset: 2px;
+  border-radius: .25rem;
+}
+
+/* (If the theme sets transforms on header children, this ensures stacking wins) */
+.header [style*="transform"],
+.header .main [style*="transform"] { z-index: auto; }
+
 
 
