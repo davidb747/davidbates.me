@@ -1,5 +1,5 @@
 ---
-permalink: /nfl/qb_ratings
+permalink: /nfl/qb_ratings/
 title: "NFL Quarterback Ratings"
 ---
 
