@@ -106,7 +106,7 @@
 .navigation ul li.has-children > .dropdown::before {
   content: "";
   display: block;
-  height: 12px; /* 👈 change this to control how far down it appears */
+  height: 20px; /* 👈 change this to control how far down it appears */
   background: transparent;
 }
 
