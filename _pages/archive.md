@@ -7,6 +7,6 @@ articles:
   show_readmore: true
   show_info: true
   show_cover: true
-  show_author
+  show_author: true
 permalink: /archives/
 ---
