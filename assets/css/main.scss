@@ -51,7 +51,7 @@
   "custom"; // <-- important: semicolon ends the import list
 
 
-/* ==== Dropdown — modern, no arrow, lower with bridge ==== */
+/* ==== Dropdown — modern, no arrow, with transparent spacer ==== */
 
 /* Keep header above content + no clipping */
 .header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
@@ -71,7 +71,7 @@
   position: absolute;
   left: 0; right: 0;
   top: 100%;
-  height: 20px; /* bridge = panel margin-top */
+  height: 20px; /* bridge height */
   pointer-events: none;
 }
 
@@ -79,11 +79,10 @@
 .navigation ul li.has-children > .dropdown {
   display: none;
   position: absolute;
+  top: 100%; /* Keep theme default position */
   left: 0;
-  top: calc(100% + 12px); /* 👈 vertical offset here */
-  margin-top: 0;
 
-  /* Visuals: sleek/modern */
+  /* Visuals */
   min-width: 240px;
   padding: 8px;
   list-style: none;
@@ -103,7 +102,15 @@
   z-index: 5000;
 }
 
-/* Open states (hover + keyboard) */
+/* Transparent spacer to push content down visually */
+.navigation ul li.has-children > .dropdown::before {
+  content: "";
+  display: block;
+  height: 12px; /* 👈 change this to control how far down it appears */
+  background: transparent;
+}
+
+/* Open states */
 .navigation ul li.has-children:hover > .dropdown,
 .navigation ul li.has-children:focus-within > .dropdown {
   display: block;
@@ -115,7 +122,7 @@
 .dropdown__item { border-radius: 10px; white-space: nowrap; }
 .dropdown__link {
   display: grid;
-  grid-template-columns: 1fr auto; /* text | optional meta */
+  grid-template-columns: 1fr auto;
   gap: .6rem;
   align-items: center;
   padding: .6rem .8rem;
