@@ -1,5 +1,5 @@
 ---
-permalink: /nfl/team_ratings
+permalink: /nfl/team_ratings/
 title: "NFL Team Ratings"
 ---
 
