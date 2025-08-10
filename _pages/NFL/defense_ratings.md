@@ -1,5 +1,5 @@
 ---
-permalink: /nfl/defense_ratings
+permalink: /nfl/defense_ratings/
 title: "NFL Defense Ratings"
 ---
 
