@@ -4,13 +4,11 @@ description: "Part 1 of my NFL quarterback modelling series. Discover which stat
 tags:
   - NFL
   - Quarterbacks
-  - Analytics
   - Data Science
   - Sports Analytics
   - QB Stats
   - NFL Stats
   - Quarterback Ranking
-  - David Bates
 categories:
   - American Football
   - Quarterbacks
