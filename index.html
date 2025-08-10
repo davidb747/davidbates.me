@@ -15,11 +15,19 @@ I'm a Physics graduate from <b>Imperial College London</b>, specialising in <b>d
 
 <h3>📊 Recent Analysis</h3>
 
+<style>
+@media (max-width: 768px) {
+  .post-thumbnail {
+    display: none;
+  }
+}
+</style>
+
 {% for post in site.posts limit:5 %}
   <article style="display:flex; margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #ccc;">
     
     {% if post.image %}
-      <div style="flex:0 0 150px; display:flex; align-items:center; justify-content:center; margin-right:1em;">
+      <div class="post-thumbnail" style="flex:0 0 150px; display:flex; align-items:center; justify-content:center; margin-right:1em;">
         <a href="{{ post.url }}">
           <img src="{{ post.image }}" alt="{{ post.title }} cover" style="width:150px; height:auto; display:block;">
         </a>
