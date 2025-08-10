@@ -26,18 +26,27 @@
     {%- if site.data.navigation.header -%}
     <nav class="navigation" aria-label="Main">
       <ul>
+        {%- include snippets/get-nav-url.html path=page.url -%}
+        {%- assign _page_url_raw = __return -%}
+        {%- comment -%} Normalize current page URL {%- endcomment -%}
+        {%- assign _page_url = _page_url_raw | replace: '/index.html','/' -%}
+        {%- if _page_url != '/' and _page_url | slice: -1 != '/' -%}{%- assign _page_url = _page_url | append: '/' -%}{%- endif -%}
+
         {%- for _item in site.data.navigation.header -%}
           {%- include snippets/get-nav-url.html path=_item.url -%}
-          {%- assign _nav_url = __return -%}
-          {%- include snippets/get-nav-url.html path=page.url -%}
-          {%- assign _page_url = __return -%}
+          {%- assign _nav_url_raw = __return -%}
+
+          {%- comment -%} Normalize nav item URL {%- endcomment -%}
+          {%- assign _nav_url = _nav_url_raw | replace: '/index.html','/' -%}
+          {%- if _nav_url != '/' and _nav_url | slice: -1 != '/' -%}{%- assign _nav_url = _nav_url | append: '/' -%}{%- endif -%}
+
           {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
           {%- assign has_children = _item.children and _item.children.size > 0 -%}
 
           {%- assign _is_parent_active = (_nav_url == _page_url) or (page.nav_key and _item.key and page.nav_key == _item.key) -%}
 
           <li class="navigation__item{% if _is_parent_active %} navigation__item--active{% endif %}{% if has_children %} has-children{% endif %}">
-            <a class="navigation__link" href="{{ _nav_url }}">
+            <a class="navigation__link" href="{{ _nav_url_raw }}">
               {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
             </a>
 
@@ -45,10 +54,13 @@
               <ul class="dropdown" aria-label="{{ _item.title | default: __return }} submenu">
                 {%- for child in _item.children -%}
                   {%- include snippets/get-nav-url.html path=child.url -%}
-                  {%- assign _child_url = __return -%}
+                  {%- assign _child_url_raw = __return -%}
+                  {%- comment -%} Normalize child URL {%- endcomment -%}
+                  {%- assign _child_url = _child_url_raw | replace: '/index.html','/' -%}
+                  {%- if _child_url != '/' and _child_url | slice: -1 != '/' -%}{%- assign _child_url = _child_url | append: '/' -%}{%- endif -%}
                   {%- assign _is_child_active = (_child_url == _page_url) -%}
                   <li class="dropdown__item{% if _is_child_active %} dropdown__item--active{% endif %}">
-                    <a class="dropdown__link" href="{{ _child_url }}">{{ child.title }}</a>
+                    <a class="dropdown__link" href="{{ _child_url_raw }}">{{ child.title }}</a>
                   </li>
                 {%- endfor -%}
               </ul>
