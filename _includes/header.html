@@ -1,133 +1,88 @@
-/* ==== Dropdown (final, consolidated) ==== */
+{%- if include.theme == 'dark' -%}
+<header class="header header--dark"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+{%- elsif include.theme == 'light' -%}
+<header class="header header--light"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+{%- else -%}
+<header class="header"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+{%- endif -%}
+<div class="main">
+<div class="header__title">
+<div class="header__brand">
+{%- include svg/logo.svg -%}
+{%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root -%}
+{%- include snippets/get-nav-url.html path=_paths_root -%}
+{%- if site.title -%}
+<a title="{% if site.description %}{{ site.description }}{% endif %}" href="{{ __return }}">{{ site.title }}</a>
+{%- endif -%}
+</div>
 
-/* Prevent clipping + keep header above content */
-.header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
-.header, .header .main, .navigation { position: relative; z-index: 4000; }
+{%- if site.search.provider -%}
+<button class="button button--secondary button--circle search-button js-search-toggle" aria-label="Search">
+<i class="fas fa-search"></i>
+</button>
+{%- endif -%}
+</div>
 
-/* Normalize nav item layout (no extra padding) */
-.navigation > ul { display: flex; align-items: center; }
-.navigation__item { display: flex; align-items: center; }
-.navigation__link { display: block; line-height: 1; }
+{%- if site.data.navigation.header -%}
+<nav class="navigation" aria-label="Main">
+<ul>
+        {%- include snippets/get-nav-url.html path=page.url -%}
+        {%- assign _page_url_raw = __return -%}
+        {%- comment -%} Normalize current page URL {%- endcomment -%}
+        {%- assign _page_url = _page_url_raw | replace: '/index.html','/' -%}
+        {%- if _page_url != '/' and _page_url | slice: -1 != '/' -%}{%- assign _page_url = _page_url | append: '/' -%}{%- endif -%}
 
-/* Parent li anchors the submenu */
-.navigation ul li.has-children { position: relative; }
+{%- for _item in site.data.navigation.header -%}
+{%- include snippets/get-nav-url.html path=_item.url -%}
+          {%- assign _nav_url = __return -%}
+          {%- include snippets/get-nav-url.html path=page.url -%}
+          {%- assign _page_url = __return -%}
+          {%- assign _nav_url_raw = __return -%}
 
-/* Hover bridge to avoid flicker entering the panel */
-.navigation ul li.has-children::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  top: 100%;
-  height: 6px;            /* match panel margin-top */
-  pointer-events: none;
-}
+          {%- comment -%} Normalize nav item URL {%- endcomment -%}
+          {%- assign _nav_url = _nav_url_raw | replace: '/index.html','/' -%}
+          {%- if _nav_url != '/' and _nav_url | slice: -1 != '/' -%}{%- assign _nav_url = _nav_url | append: '/' -%}{%- endif -%}
 
-/* --- Pretty panel --- */
-.navigation ul li.has-children > .dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 240px;
-  padding: 6px;
-  margin-top: 6px;        /* tiny breathing room below the link */
-  list-style: none;
+{%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
+{%- assign has_children = _item.children and _item.children.size > 0 -%}
 
-  background: var(--card-background, #fff);
-  border: 1px solid var(--divider, rgba(0,0,0,.08));
-  border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.15);
-  -webkit-backdrop-filter: saturate(120%) blur(4px);
-  backdrop-filter: saturate(120%) blur(4px);
+{%- assign _is_parent_active = (_nav_url == _page_url) or (page.nav_key and _item.key and page.nav_key == _item.key) -%}
 
-  opacity: 0;
-  transform: translateY(6px) scale(.98);
-  transform-origin: top left;
-  transition: opacity .16s ease, transform .16s ease;
-  z-index: 5000;
-}
+<li class="navigation__item{% if _is_parent_active %} navigation__item--active{% endif %}{% if has_children %} has-children{% endif %}">
+            <a class="navigation__link" href="{{ _nav_url }}">
+            <a class="navigation__link" href="{{ _nav_url_raw }}">
+{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
+</a>
 
-/* Arrow pointer */
-.navigation ul li.has-children > .dropdown::before {
-  content: "";
-  position: absolute;
-  top: -6px; left: 16px;
-  width: 10px; height: 10px;
-  background: inherit;
-  border-left: 1px solid var(--divider, rgba(0,0,0,.08));
-  border-top: 1px solid var(--divider, rgba(0,0,0,.08));
-  transform: rotate(45deg);
-}
+{%- if has_children -%}
+<ul class="dropdown" aria-label="{{ _item.title | default: __return }} submenu">
+{%- for child in _item.children -%}
+{%- include snippets/get-nav-url.html path=child.url -%}
+                  {%- assign _child_url = __return -%}
+                  {%- assign _child_url_raw = __return -%}
+                  {%- comment -%} Normalize child URL {%- endcomment -%}
+                  {%- assign _child_url = _child_url_raw | replace: '/index.html','/' -%}
+                  {%- if _child_url != '/' and _child_url | slice: -1 != '/' -%}{%- assign _child_url = _child_url | append: '/' -%}{%- endif -%}
+{%- assign _is_child_active = (_child_url == _page_url) -%}
+<li class="dropdown__item{% if _is_child_active %} dropdown__item--active{% endif %}">
+                    <a class="dropdown__link" href="{{ _child_url }}">{{ child.title }}</a>
+                    <a class="dropdown__link" href="{{ _child_url_raw }}">{{ child.title }}</a>
+</li>
+{%- endfor -%}
+</ul>
+{%- endif -%}
+</li>
+{%- endfor -%}
 
-/* Open states (hover + keyboard) */
-.navigation ul li.has-children:hover > .dropdown,
-.navigation ul li.has-children:focus-within > .dropdown {
-  display: block;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* Items */
-.dropdown__item { border-radius: 8px; white-space: nowrap; }
-.dropdown__link {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* icon | text | meta (optional) */
-  gap: .6rem;
-  align-items: center;
-  padding: .55rem .75rem;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 8px;
-  line-height: 1.2;
-  transition: background-color .12s ease, transform .06s ease;
-}
-.dropdown__link:hover,
-.dropdown__link:focus {
-  background: var(--card-hover, rgba(0,0,0,.05));
-  outline: none;
-}
-.dropdown__item--active > .dropdown__link {
-  background: var(--card-hover, rgba(0,0,0,.08));
-  font-weight: 600;
-}
-.dropdown__item + .dropdown__item { margin-top: 2px; }
-
-/* Right-edge alignment (last item) */
-.navigation ul > .has-children:last-child > .dropdown { left: auto; right: 0; }
-.navigation ul > .has-children:last-child > .dropdown::before { left: auto; right: 16px; }
-
-/* Optional: grid layout when many children (add .dropdown--grid class to UL) */
-.dropdown.dropdown--grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4px 6px;
-  min-width: 420px;
-  padding: 8px;
-}
-
-/* Accessibility */
-.navigation a:focus {
-  outline: 2px solid rgba(0,0,0,.2);
-  outline-offset: 2px;
-  border-radius: 6px;
-}
-
-/* Mobile: inline panel style */
-@media (max-width: 768px) {
-  .navigation ul li.has-children > .dropdown {
-    position: static;
-    margin-top: 6px;
-    box-shadow: none;
-    border-radius: 10px;
-    transform: none; opacity: 1; display: none;
-  }
-  .navigation ul li.has-children:hover > .dropdown,
-  .navigation ul li.has-children:focus-within > .dropdown {
-    display: block;
-  }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .navigation ul li.has-children > .dropdown { transition: none; transform: none; opacity: 1; }
-}
+{%- if site.search.provider -%}
+<li class="navigation__item">
+<button class="button button--secondary button--circle search-button js-search-toggle" aria-label="Search">
+<i class="fas fa-search"></i>
+</button>
+</li>
+{%- endif -%}
+</ul>
+</nav>
+{%- endif -%}
+</div>
+</header>
