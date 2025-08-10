@@ -65,55 +65,50 @@
 /* Parent anchors submenu */
 .navigation ul li.has-children { position: relative; }
 
-/* Bigger bridge = margin-top (10) + translateY (12) + ~2px wiggle */
+/* Hover bridge (matches panel offset) */
 .navigation ul li.has-children::after {
   content: "";
   position: absolute;
   left: 0; right: 0;
   top: 100%;
-  height: 24px;              /* try 24–28px if you still feel a drop */
+  height: 28px;            /* bridge = panel margin-top */
   pointer-events: none;
 }
 
-/* Panel: always in the flow for hover math (no display:none) */
+/* Panel */
 .navigation ul li.has-children > .dropdown {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
 
+  /* Visuals: sleek/modern */
   min-width: 240px;
   padding: 8px;
-  margin-top: 10px;
+  margin-top: 10px;        /* moved down slightly */
+  list-style: none;
 
   background: var(--card-background, #fff);
-  border: 1px solid rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.06);   /* softer border */
   border-radius: 14px;
   box-shadow: 0 14px 40px rgba(0,0,0,.18);
   -webkit-backdrop-filter: saturate(120%) blur(6px);
   backdrop-filter: saturate(120%) blur(6px);
 
-  /* keep it present but untouchable until open */
-  visibility: hidden;
-  pointer-events: none;
+  /* Motion */
   opacity: 0;
-  transform: translateY(12px) scale(.985);
+  transform: translateY(8px) scale(.985);
   transform-origin: top left;
-  transition: opacity .18s cubic-bezier(.2,.6,.2,1),
-              transform .18s cubic-bezier(.2,.6,.2,1),
-              visibility 0s linear .18s; /* hide after fade */
+  transition: opacity .18s cubic-bezier(.2,.6,.2,1), transform .18s cubic-bezier(.2,.6,.2,1);
   z-index: 5000;
 }
 
-/* Open state */
+/* Open states (hover + keyboard) */
 .navigation ul li.has-children:hover > .dropdown,
 .navigation ul li.has-children:focus-within > .dropdown {
-  visibility: visible;
-  pointer-events: auto;
+  display: block;
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition: opacity .18s cubic-bezier(.2,.6,.2,1),
-              transform .18s cubic-bezier(.2,.6,.2,1),
-              visibility 0s; /* show immediately */
 }
 
 /* Items */
