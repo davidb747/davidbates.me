@@ -62,17 +62,14 @@
 .navigation__item { display: flex; align-items: center; }
 .navigation__link { display: block; line-height: 1; }
 
-/* Parent anchors submenu */
+/* Parent is already relative — good */
 .navigation ul li.has-children { position: relative; }
 
-/* Hover bridge (matches panel offset) */
-.navigation ul li.has-children::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  top: 100%;
-  height: 28px;            /* bridge = panel margin-top */
-  pointer-events: none;
+/* Move the panel down: use top: calc(...) rather than margin */
+.navigation ul li.has-children > .dropdown {
+  top: calc(100% + 12px);  /* 👈 controls vertical offset */
+  left: 0;
+  margin-top: 0;           /* margin doesn’t help on abs-pos here */
 }
 
 /* Panel */
