@@ -3,19 +3,16 @@ permalink: /about/
 title: "About Me"
 ---
 
-Hi, I’m **David Bates** — a Physics graduate from Imperial College London with a passion for **sports analytics**, **machine learning**, and using data to solve real-world problems.
+Hi, I’m **David Bates** — a Physics graduate from *Imperial College London* with a strong interest in sports analytics, machine learning, and turning complex datasets into meaningful, actionable insights. I enjoy applying statistical modelling and predictive techniques to real-world problems, particularly in sport, where data-driven thinking can uncover trends, challenge assumptions, and improve decision-making.  
 
-I’ve applied statistical modelling and predictive techniques to sports like **snooker** and **American football**, building tools such as:
-- 🧠 A custom **Elo rating system** to track and predict NFL team performance
-- 🎯 A machine learning model (DeepCue) that forecasts snooker outcomes using historical performance and matchup dynamics
+Some of my favourite projects so far have been in American football and snooker, where I’ve built tools that combine rigorous analysis with intuitive visualisation:  
 
-My broader experience includes:
-- 📊 **Data analysis** and **automation** for over 100 clients at Pro-Force Ltd
-- 📁 Building **reporting pipelines** using Python, SQL, and Excel VBA
-- 📉 Exploring large datasets in fields like **climate science**, through my Master’s thesis using satellite data and statistical inference
+- 🏈 [A custom Elo rating system](https://davidbates.me/nfl/) that tracks and predicts NFL team performance, adjusting dynamically for factors such as home-field advantage and margin of victory.  
+- 🎯 [DeepCue](https://davidbates.me/deepcue/), a machine learning model that forecasts snooker match outcomes by blending historical performance, matchup dynamics, and feature engineering to capture subtle influences on results.  
 
-Right now, I’m working on expanding my portfolio of applied data science projects, especially at the intersection of sports, finance, and technology. This blog is where I post analysis, visualisations, and reflections on those projects.
+Beyond sports, I’ve explored large and varied datasets across different fields. My Master’s thesis focused on analysing satellite climate and emissions data, applying statistical inference to understand environmental trends. I’ve also designed automated reporting pipelines and analytical workflows using Python, SQL, and Excel VBA — helping to transform raw, unstructured information into clear and actionable reports.  
 
----
+Right now, I’m **looking for new opportunities** where I can bring this analytical mindset to sports, finance, or technology — ideally in a role that values curiosity, creativity, and a willingness to experiment. I’m particularly interested in collaborating with others, whether that’s co-developing models, exploring new datasets, or simply exchanging ideas over coffee.  
 
-If you're interested in collaborating or just talking sports data, feel free to reach out via [email](mailto:contact@davidbates.me) or [GitHub](https://github.com/davidb747).
+If you share an interest in data-driven problem solving — especially where sport and technology meet — I’d love to connect and talk.  
+
