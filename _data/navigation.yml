@@ -4,16 +4,17 @@ header:
   - title: "NFL"
     url: /nfl/
     children:
-      - title: "Posts"
-        url: /nfl/archives/
+      - title: "Predictions"
+        url: /nfl/predictions/
       - title: "Team Ratings"
         url: /nfl/team_ratings/
       - title: "QB Ratings"
         url: /nfl/qb_ratings/
       - title: "Defense Ratings"
         url: /nfl/defense_ratings/
-      - title: "Predictions"
-        url: /nfl/predictions/
+      - title: "Posts"
+        url: /nfl/archives/
+      
   - title: "Snooker"
     url: /snooker/
     children:
