@@ -117,4 +117,7 @@
 /* Position the dropdown relative to its parent <li> */
 .navigation ul li.has-children { position: relative; }
 
+/* If list items are inline-block in your theme */
+.navigation .navigation__item { vertical-align: middle; }
+
 
