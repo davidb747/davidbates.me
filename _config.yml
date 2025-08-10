@@ -217,13 +217,11 @@ defaults:
 
 ## => Plugins
 ##############################
-remote_theme: kitian616/jekyll-text-theme
 plugins:
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
   - jemoji
-
 
 include:
   - _pages
