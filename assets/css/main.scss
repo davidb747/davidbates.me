@@ -51,7 +51,7 @@
   "custom"; // <-- important: semicolon ends the import list
 
 
-/* ==== Dropdown — modern, no arrow, with transparent spacer ==== */
+/* ==== Dropdown — modern, no arrow, with transparent hover bridge (no white growth) ==== */
 
 /* Keep header above content + no clipping */
 .header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
@@ -62,25 +62,19 @@
 .navigation__item { display: flex; align-items: center; }
 .navigation__link { display: block; line-height: 1; }
 
-/* Parent anchors submenu */
-.navigation ul li.has-children { position: relative; }
-
-/* Hover bridge (matches panel offset) */
-.navigation ul li.has-children::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  top: 100%;
-  height: 20px; /* bridge height */
-  pointer-events: none;
+/* Parent anchors submenu and exposes a size knob */
+.navigation ul li.has-children {
+  position: relative;
+  --dropdown-spacer: 28px; /* 👈 adjust this to make the transparent box bigger/smaller */
 }
 
 /* Panel */
 .navigation ul li.has-children > .dropdown {
   display: none;
   position: absolute;
-  top: 100%; /* Keep theme default position */
+  top: 100%;               /* keep theme default position */
   left: 0;
+  overflow: visible;       /* allow the pseudo-element to extend outside */
 
   /* Visuals */
   min-width: 240px;
@@ -102,12 +96,17 @@
   z-index: 5000;
 }
 
-/* Transparent spacer to push content down visually */
+/* Transparent hover bridge ABOVE the dropdown (doesn't change white box size) */
 .navigation ul li.has-children > .dropdown::before {
   content: "";
-  display: block;
-  height: 20px; /* 👈 change this to control how far down it appears */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(-1 * var(--dropdown-spacer)); /* extend upward */
+  height: var(--dropdown-spacer);
   background: transparent;
+  /* Keep it part of the dropdown hit area so :hover stays active */
+  /* No display:block here, so it doesn't push content */
 }
 
 /* Open states */
@@ -133,20 +132,14 @@
   transition: background-color .12s ease, transform .06s ease;
 }
 .dropdown__link:hover,
-.dropdown__link:focus {
-  background: var(--card-hover, rgba(0,0,0,.04));
-  outline: none;
-}
-.dropdown__item--active > .dropdown__link {
-  background: var(--card-hover, rgba(0,0,0,.07));
-  font-weight: 600;
-}
+.dropdown__link:focus { background: var(--card-hover, rgba(0,0,0,.04)); outline: none; }
+.dropdown__item--active > .dropdown__link { background: var(--card-hover, rgba(0,0,0,.07)); font-weight: 600; }
 .dropdown__item + .dropdown__item { margin-top: 3px; }
 
 /* Right-edge alignment */
 .navigation ul > .has-children:last-child > .dropdown { left: auto; right: 0; }
 
-/* Optional grid (add .dropdown--grid on the UL) */
+/* Optional grid */
 .dropdown.dropdown--grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -156,17 +149,10 @@
 }
 
 /* Accessibility */
-.navigation a:focus {
-  outline: 2px solid rgba(0,0,0,.18);
-  outline-offset: 2px;
-  border-radius: 8px;
-}
+.navigation a:focus { outline: 2px solid rgba(0,0,0,.18); outline-offset: 2px; border-radius: 8px; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .navigation ul li.has-children > .dropdown {
-    transition: none;
-    transform: none;
-    opacity: 1;
-  }
+  .navigation ul li.has-children > .dropdown { transition: none; transform: none; opacity: 1; }
 }
+
