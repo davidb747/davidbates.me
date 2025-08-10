@@ -1,5 +1,5 @@
 ---
-permalink: /nfl/predictions
+permalink: /nfl/predictions/
 title: "NFL Predictions"
 ---
 
