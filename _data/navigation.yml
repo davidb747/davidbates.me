@@ -4,14 +4,22 @@ header:
   - title: "NFL"
     url: /nfl/
     children:
-      - title: "NFL Posts"
+      - title: "Posts"
         url: /nfl/archives/
+      - title: "Team Ratings'
+        url: /nfl/team_ratings/
+      - title: "QB Ratings'
+        url: /nfl/qb_ratings/
+      - title: "Defense Ratings'
+        url: /nfl/defense_ratings/
+      - title: "Predictions'
+        url: /nfl/predictions/
   - title: "Snooker"
     url: /snooker/
     children:
       - title: "DeepCue"
         url: /deepcue/
-      - title: "Snooker Posts"
+      - title: "Posts"
         url: /snooker/archives/
   - title: "CV"
     url: /cv/
