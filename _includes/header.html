@@ -1,80 +1,97 @@
 {%- if include.theme == 'dark' -%}
-  <header class="header header--dark"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+<header class="header header--dark"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
 {%- elsif include.theme == 'light' -%}
-  <header class="header header--light"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+<header class="header header--light"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
 {%- else -%}
-  <header class="header"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+<header class="header"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
 {%- endif -%}
-  <div class="main">
-    <div class="header__title">
-      <div class="header__brand">
-        {%- include svg/logo.svg -%}
-        {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root -%}
-        {%- include snippets/get-nav-url.html path=_paths_root -%}
-        {%- if site.title -%}
-          <a title="{% if site.description %}{{ site.description }}{% endif %}" href="{{ __return | relative_url }}">{{ site.title }}</a>
-        {%- endif -%}
-      </div>
+<div class="main">
+<div class="header__title">
+<div class="header__brand">
+{%- include svg/logo.svg -%}
+{%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root -%}
+{%- include snippets/get-nav-url.html path=_paths_root -%}
+{%- if site.title -%}
+<a title="{% if site.description %}{{ site.description }}{% endif %}" href="{{ __return }}">{{ site.title }}</a>
+{%- endif -%}
+</div>
 
-      {%- if site.search.provider -%}
-        <button class="button button--secondary button--circle search-button js-search-toggle" aria-label="Search">
-          <i class="fas fa-search"></i>
-        </button>
-      {%- endif -%}
-    </div>
+{%- if site.search.provider -%}
+<button class="button button--secondary button--circle search-button js-search-toggle" aria-label="Search">
+<i class="fas fa-search"></i>
+</button>
+{%- endif -%}
+</div>
 
-    {%- if site.data.navigation.header -%}
-    <nav class="navigation" aria-label="Main">
-      <ul>
-        {%- for _item in site.data.navigation.header -%}
-          {%- include snippets/get-nav-url.html path=_item.url -%}
-          {%- assign _nav_url = __return -%}
-          {%- include snippets/get-nav-url.html path=page.url -%}
-          {%- assign _page_url = __return -%}
-          {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
-          {%- assign has_children = _item.children and _item.children.size > 0 -%}
+{%- if site.data.navigation.header -%}
+<nav class="navigation" aria-label="Main">
+<ul>
+{%- for _item in site.data.navigation.header -%}
+{%- include snippets/get-nav-url.html path=_item.url -%}
+{%- assign _nav_url = __return -%}
+{%- include snippets/get-nav-url.html path=page.url -%}
+{%- assign _page_url = __return -%}
+{%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
 
-          {%- comment -%} Parent active = exact match (or nav_key) only {%- endcomment -%}
-          {%- assign _is_exact_match = (_nav_url == _page_url) -%}
-          {%- assign _is_key_match = page.nav_key and _item.key and page.nav_key == _item.key -%}
+          {%- assign _active = (_nav_url == _page_url) or (page.nav_key and _item.key and page.nav_key == _item.key) -%}
+        
+{%- assign has_children = _item.children and _item.children.size > 0 -%}
 
-          {%- if _is_exact_match or _is_key_match -%}
+          <li class="navigation__item{% if _active %} navigation__item--active{% endif %}{% if has_children %} has-children{% endif %}">
+            <a class="navigation__link" href="{{ _nav_url }}">
+              {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
+            </a>
+
+            {%- if has_children -%}
+              <ul class="dropdown" aria-label="{{ _item.title | default: __return }} submenu">
+                {%- for child in _item.children -%}
+                  {%- include snippets/get-nav-url.html path=child.url -%}
+                  {%- assign _child_url = __return -%}
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="{{ _child_url }}">{{ child.title }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </li>
+        
+          {%- comment -%}
+          Use TeXt’s original active logic exactly, so only ONE item lights up.
+          {%- endcomment -%}
+          {%- if _nav_url == _page_url or (page.nav_key and _item.key and page.nav_key == _item.key) -%}
             <li class="navigation__item navigation__item--active{% if has_children %} has-children{% endif %}">
           {%- else -%}
             <li class="navigation__item{% if has_children %} has-children{% endif %}">
           {%- endif -%}
-
-              <a class="navigation__link"
-                 href="{{ _nav_url | relative_url }}"
-                 {% if has_children %}aria-haspopup="true"{% endif %}>
+        
+              <a class="navigation__link" href="{{ _nav_url }}">
                 {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
               </a>
-
+        
               {%- if has_children -%}
                 <ul class="dropdown" aria-label="{{ _item.title | default: __return }} submenu">
                   {%- for child in _item.children -%}
                     {%- include snippets/get-nav-url.html path=child.url -%}
                     {%- assign _child_url = __return -%}
-                    {%- assign _child_active = (_child_url == _page_url) -%}
-                    <li class="dropdown__item{% if _child_active %} dropdown__item--active{% endif %}">
-                      <a class="dropdown__link" href="{{ _child_url | relative_url }}">{{ child.title }}</a>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="{{ _child_url }}">{{ child.title }}</a>
                     </li>
                   {%- endfor -%}
                 </ul>
               {%- endif -%}
             </li>
-        {%- endfor -%}
+{%- endfor -%}
 
-        {%- comment -%} Remove this if you only want the top-right search button {%- endcomment -%}
-        {%- if false and site.search.provider -%}
-          <li class="navigation__item">
-            <button class="button button--secondary button--circle search-button js-search-toggle" aria-label="Search">
-              <i class="fas fa-search"></i>
-            </button>
-          </li>
-        {%- endif -%}
-      </ul>
-    </nav>
-    {%- endif -%}
-  </div>
+
+{%- if site.search.provider -%}
+<li class="navigation__item">
+<button class="button button--secondary button--circle search-button js-search-toggle" aria-label="Search">
+<i class="fas fa-search"></i>
+</button>
+</li>
+{%- endif -%}
+</ul>
+</nav>
+{%- endif -%}
+</div>
 </header>
