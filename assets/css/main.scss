@@ -65,7 +65,7 @@
 /* Parent anchors submenu and exposes a size knob */
 .navigation ul li.has-children {
   position: relative;
-  --dropdown-spacer: 28px; /* 👈 adjust this to make the transparent box bigger/smaller */
+  --dropdown-spacer: 12px; /* 👈 adjust this to make the transparent box bigger/smaller */
 }
 
 /* Panel */
