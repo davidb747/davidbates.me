@@ -16,27 +16,28 @@ I'm a Physics graduate from <b>Imperial College London</b>, specialising in <b>d
 <h3>📊 Recent Analysis</h3>
 
 {% for post in site.posts limit:5 %}
-  <article style="margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #ccc;">
+  <article style="display:flex; align-items:flex-start; margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #ccc;">
     
     {% if post.image %}
-      <a href="{{ post.url }}">
-        <img src="{{ post.image }}" alt="{{ post.title }} cover" style="width:100%; height:auto; margin-bottom:0.5em;">
+      <a href="{{ post.url }}" style="flex:0 0 150px; margin-right:1em;">
+        <img src="{{ post.image }}" alt="{{ post.title }} cover" style="width:150px; height:auto; display:block;">
       </a>
     {% endif %}
     
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    
-    <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-    
-    <small>
-      <em>{{ post.date | date: "%B %d, %Y" }}</em> |
-      {% assign words = post.content | number_of_words %}
-      {% assign minutes = words | divided_by: 200 | ceil %}
-      {{ minutes }} min read
-    </small>
+    <div style="flex:1;">
+      <h3 style="margin-top:0;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+      <small>
+        <em>{{ post.date | date: "%B %d, %Y" }}</em> |
+        {% assign words = post.content | number_of_words %}
+        {% assign minutes = words | divided_by: 200 | ceil %}
+        {{ minutes }} min read
+      </small>
+    </div>
     
   </article>
 {% endfor %}
+
 
 
 
