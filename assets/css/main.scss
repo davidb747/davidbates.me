@@ -59,10 +59,14 @@
 .header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
 
 /* Dropdown basics */
-.navigation ul li.has-children { position: relative; }
-.navigation .has-children > .navigation__link {
+.navigation__link {
+  padding: 0.75rem 0.5rem; /* adjust to match your theme */
   display: inline-block;
-  padding-bottom: .75rem; /* bigger hover area to avoid gaps */
+}
+
+/* Remove the special parent-only bottom padding */
+.navigation .has-children > a {
+  padding-bottom: inherit;
 }
 
 /* Submenu panel */
