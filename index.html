@@ -16,14 +16,6 @@ I'm a Physics graduate from <b>Imperial College London</b>, specialising in <b>d
 <h3>📊 Recent Analysis</h3>
 
 <style>
-@media (max-width: 768px) {
-  .post-thumbnail {
-    display: none;
-  }
-}
-</style>
-
-<style>
 .post-item {
   display: flex;
   margin-bottom: 2em;
@@ -48,17 +40,12 @@ I'm a Physics graduate from <b>Imperial College London</b>, specialising in <b>d
   flex-direction: column;
   justify-content: center;
 }
-.read-more-btn {
-  display: inline-block;
-  padding: 0.4em 0.8em;
-  background-color: #007acc;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9em;
+/* Simple link style for Read More */
+.read-more-link {
   margin-top: 0.5em;
+  font-weight: bold;
+  text-decoration: underline;
 }
-.read-more-btn:hover { background-color: #005fa3; }
 
 /* Mobile: hide the thumbnail column completely */
 @media (max-width: 768px) {
@@ -86,7 +73,7 @@ I'm a Physics graduate from <b>Imperial College London</b>, specialising in <b>d
         {% assign minutes = words | divided_by: 200 | ceil %}
         {{ minutes }} min read
       </small>
-      <a class="read-more-btn" href="{{ post.url }}">Read More</a>
+      <a class="read-more-link" href="{{ post.url }}">Read More</a>
     </div>
   </article>
 {% endfor %}
