@@ -56,15 +56,11 @@ Once the data is cleaned, the next step is deciding which numbers actually tell 
 
 Here are the core stats I use:
 
-**QB EPA per Dropback** – Expected Points Added measures how much a quarterback’s actions on a given play change the expected points of the drive. Crucially, it’s calculated relative to what an average quarterback would be expected to produce in the same down, distance, and field position.
-
-**Success Rate** – Consistency matters. This shows how often the quarterback gains enough yardage to keep the drive going (a “successful” play), even if it isn’t a highlight throw.
-
-**Air Yards** – How far the ball travels in the air before it’s caught, showing whether a QB is attacking deep or relying on shorter, safer passes like screens and check-downs.
-
-**Performance Under Pressure** – Many QBs look great with a clean pocket; far fewer keep their composure when the blitz is coming.
-
-**Turnover Rate** – Big throws are important, but they’re meaningless if the ball is given away. A low interception or fumble rate can be the difference between winning and losing.
+- **QB EPA per Dropback** – Expected Points Added measures how much a quarterback’s actions on a given play change the expected points of the drive. Crucially, it’s calculated relative to what an average quarterback would be expected to produce in the same down, distance, and field position.
+- **Success Rate** – Consistency matters. This shows how often the quarterback gains enough yardage to keep the drive going (a “successful” play), even if it isn’t a highlight throw.
+- **Air Yards** – How far the ball travels in the air before it’s caught, showing whether a QB is attacking deep or relying on shorter, safer passes like screens and check-downs.
+- **Performance Under Pressure** – Many QBs look great with a clean pocket; far fewer keep their composure when the blitz is coming.
+- **Turnover Rate** – Big throws are important, but they’re meaningless if the ball is given away. A low interception or fumble rate can be the difference between winning and losing.
 
 Each of these metrics captures a different part of a quarterback’s game. Taken together, they help form a complete picture — one that extends far beyond touchdowns and passing yards.
 
