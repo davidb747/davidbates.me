@@ -2,7 +2,6 @@ header:
   - title: "Home"
     url: /
   - title: "NFL"
-    url: /nfl/
     children:
       - title: "NFL Posts"
         url: /nfl/archives/
