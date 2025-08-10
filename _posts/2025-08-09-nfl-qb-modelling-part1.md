@@ -19,6 +19,7 @@ categories:
 date: 2025-08-09 12:00:00 +0000
 permalink: /nfl-qb-modelling-part1/
 series: "Modelling NFL Quarterbacks"
+cover: /assets/images/qb_modelling_part1_cover.png
 image: /assets/images/qb_modelling_part1_cover.png
 ---
 
