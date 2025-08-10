@@ -1,3 +1,7 @@
+---
+# Only the main Sass file needs front matter
+---
+
 @import
   "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
   "skins/highlight/{{ site.highlight_theme | default: site.data.variables.default.highlight_theme }}",
@@ -45,6 +49,7 @@
   "layout/landing",
   "layout/404",
   "custom"; // <-- important: semicolon ends the import list
+
 
 /* ==== Dropdown (final, consolidated) ==== */
 
