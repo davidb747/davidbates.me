@@ -1,7 +1,7 @@
 david:
   type      : "person"
   name      : David Bates
-  url       :
+  url       : davidbates.me
   avatar    : # path or url of avatar image (square)
   bio       : Physics graduate, data scientist, sports analytics enthusiast.
   email     : contact@davidbates.me
@@ -16,4 +16,5 @@ david:
   linkedin  : "david-bates-1545ab250"
   github    : "davidb747"
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+
 
