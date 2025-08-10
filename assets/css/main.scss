@@ -1,149 +1,133 @@
----
-# Only the main Sass file needs front matter
----
+/* ==== Dropdown (final, consolidated) ==== */
 
-@import
-  "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
-  "skins/highlight/{{ site.highlight_theme | default: site.data.variables.default.highlight_theme }}",
-  "common/variables",
-  "common/function",
-  "common/classes",
-  "common/reset",
-  "common/print",
-  "common/components/button",
-  "common/components/image",
-  "common/components/card",
-  "common/components/gallery",
-  "common/components/hero",
-  "common/components/menu",
-  "common/components/modal",
-  "common/components/toc",
-  "common/components/item",
-  "common/components/swiper",
-  "animate/fade-in",
-  "animate/fade-in-down",
-  "animate/fade-in-up",
-  "components/main",
-  "components/header",
-  "components/footer",
-  "components/article-list",
-  "components/article-info",
-  "components/article-header",
-  "components/article-content",
-  "components/article-footer",
-  "components/author-links",
-  "components/author-profile",
-  "components/tags",
-  "components/search",
-  "components/lightbox",
-  "components/extensions",
-  "additional/alert",
-  "additional/tag",
-  "additional/photo-frame",
-  "layout/base",
-  "layout/page",
-  "layout/article",
-  "layout/articles",
-  "layout/archive",
-  "layout/home",
-  "layout/landing",
-  "layout/404",
-  "custom"; // <-- important: semicolon ends the import list
-
-/* Your dropdown styles */
-/* Elevate header/nav above content and prevent clipping */
-.header,
-.header .main,
-.navigation { position: relative; z-index: 4000; }
-.navigation ul li.has-children .dropdown { z-index: 5000; }
+/* Prevent clipping + keep header above content */
 .header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
+.header, .header .main, .navigation { position: relative; z-index: 4000; }
 
-/* Submenu panel */
-.navigation ul li.has-children > .dropdown {
-  display: none;
-  position: absolute;
-  top: 100%; /* flush to parent */
-  left: 0;
-  min-width: 200px;
-  background: var(--card-background, #fff);
-  border: 1px solid var(--divider, #ddd);
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  border-radius: .5rem;
-  padding: .25rem 0;
-  margin: 0; list-style: none;
-}
+/* Normalize nav item layout (no extra padding) */
+.navigation > ul { display: flex; align-items: center; }
+.navigation__item { display: flex; align-items: center; }
+.navigation__link { display: block; line-height: 1; }
 
-/* Show on hover and keyboard focus */
-.navigation ul li.has-children:hover > .dropdown,
-.navigation ul li.has-children:focus-within > .dropdown { display: block; }
+/* Parent li anchors the submenu */
+.navigation ul li.has-children { position: relative; }
 
-/* Hover bridge (prevents flicker when moving into submenu) */
+/* Hover bridge to avoid flicker entering the panel */
 .navigation ul li.has-children::after {
   content: "";
   position: absolute;
   left: 0; right: 0;
   top: 100%;
-  height: 8px;
+  height: 6px;            /* match panel margin-top */
   pointer-events: none;
 }
 
-/* Items */
-.dropdown__item { white-space: nowrap; }
-.dropdown__link {
+/* --- Pretty panel --- */
+.navigation ul li.has-children > .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  padding: 6px;
+  margin-top: 6px;        /* tiny breathing room below the link */
+  list-style: none;
+
+  background: var(--card-background, #fff);
+  border: 1px solid var(--divider, rgba(0,0,0,.08));
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+  -webkit-backdrop-filter: saturate(120%) blur(4px);
+  backdrop-filter: saturate(120%) blur(4px);
+
+  opacity: 0;
+  transform: translateY(6px) scale(.98);
+  transform-origin: top left;
+  transition: opacity .16s ease, transform .16s ease;
+  z-index: 5000;
+}
+
+/* Arrow pointer */
+.navigation ul li.has-children > .dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px; left: 16px;
+  width: 10px; height: 10px;
+  background: inherit;
+  border-left: 1px solid var(--divider, rgba(0,0,0,.08));
+  border-top: 1px solid var(--divider, rgba(0,0,0,.08));
+  transform: rotate(45deg);
+}
+
+/* Open states (hover + keyboard) */
+.navigation ul li.has-children:hover > .dropdown,
+.navigation ul li.has-children:focus-within > .dropdown {
   display: block;
-  padding: .5rem 1rem;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Items */
+.dropdown__item { border-radius: 8px; white-space: nowrap; }
+.dropdown__link {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* icon | text | meta (optional) */
+  gap: .6rem;
+  align-items: center;
+  padding: .55rem .75rem;
   text-decoration: none;
   color: inherit;
-  line-height: 1.25;
+  border-radius: 8px;
+  line-height: 1.2;
+  transition: background-color .12s ease, transform .06s ease;
 }
 .dropdown__link:hover,
 .dropdown__link:focus {
-  background: var(--card-hover, #f5f5f5);
+  background: var(--card-hover, rgba(0,0,0,.05));
   outline: none;
-  border-radius: .25rem;
+}
+.dropdown__item--active > .dropdown__link {
+  background: var(--card-hover, rgba(0,0,0,.08));
+  font-weight: 600;
+}
+.dropdown__item + .dropdown__item { margin-top: 2px; }
+
+/* Right-edge alignment (last item) */
+.navigation ul > .has-children:last-child > .dropdown { left: auto; right: 0; }
+.navigation ul > .has-children:last-child > .dropdown::before { left: auto; right: 16px; }
+
+/* Optional: grid layout when many children (add .dropdown--grid class to UL) */
+.dropdown.dropdown--grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 6px;
+  min-width: 420px;
+  padding: 8px;
 }
 
-/* Optional: subtle focus ring consistent with theme buttons */
+/* Accessibility */
 .navigation a:focus {
   outline: 2px solid rgba(0,0,0,.2);
   outline-offset: 2px;
-  border-radius: .25rem;
+  border-radius: 6px;
 }
 
-/* (If the theme sets transforms on header children, this ensures stacking wins) */
-.header [style*="transform"],
-.header .main [style*="transform"] { z-index: auto; }
-
-/* Position the dropdown relative to its parent <li> */
-.navigation ul li.has-children { position: relative; }
-
-/* Force even vertical alignment for all header items (no extra padding) */
-.navigation > ul {
-  display: flex;
-  align-items: center;   /* centers items vertically */
+/* Mobile: inline panel style */
+@media (max-width: 768px) {
+  .navigation ul li.has-children > .dropdown {
+    position: static;
+    margin-top: 6px;
+    box-shadow: none;
+    border-radius: 10px;
+    transform: none; opacity: 1; display: none;
+  }
+  .navigation ul li.has-children:hover > .dropdown,
+  .navigation ul li.has-children:focus-within > .dropdown {
+    display: block;
+  }
 }
 
-.navigation__item {
-  display: flex;         /* avoid baseline quirks from inline/inline-block */
-  align-items: center;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .navigation ul li.has-children > .dropdown { transition: none; transform: none; opacity: 1; }
 }
-
-.navigation__link {
-  display: block;        /* consistent box for all links */
-  line-height: 1;        /* no extra vertical space */
-}
-
-/* Ensure the dropdown doesn't affect the line box of the parent */
-.navigation ul li.has-children > .dropdown {
-  position: absolute;
-}
-
-/* Active state for a child dropdown item (doesn't bleed to siblings/parent) */
-.dropdown__item--active > .dropdown__link {
-  font-weight: 600;
-  background: var(--card-hover, #f5f5f5);
-  border-radius: .25rem;
-}
-
-
-
