@@ -6,5 +6,6 @@ articles:
   show_excerpt: true
   show_readmore: true
   show_info: true
+  show_cover: true
 permalink: /nfl/archives/
 ---
