@@ -51,6 +51,11 @@ MSci Physics graduate from Imperial College London with a strong academic founda
 - Achieved ROC AUC > 0.74 across 41,000+ samples using XGBoost and PyTorch.  
 - End-to-end workflow: feature engineering, hyperparameter tuning, evaluation (AUC, F1, ROC).  
 
+### [**NFL Performance Prediction Model**](https://davidbates.me/nfl/) — Sports Analytics Project
+*August 2024 – Present*
+- Developed a custom Elo-based rating system with dynamic home-field advantage, quarterback/offense/defense splits, and rolling performance metrics.
+- Integrated weather, coaching, and betting odds into Random Forest and XGBoost models to forecast game outcomes and assess betting market efficiency.
+- 
 ---
 
 ## **Leadership**
