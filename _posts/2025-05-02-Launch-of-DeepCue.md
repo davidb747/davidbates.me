@@ -21,14 +21,11 @@ cover: /assets/images/launch_of_deepcue_cover.png
 image: /assets/images/launch_of_deepcue_cover.png
 ---
 
-
 ![Launch of DeepCue cover image](/assets/images/launch_of_deepcue_cover.png)
 
 _48-hour sprint to build a snooker match prediction engine using scraped data, feature engineering, and ML models._
 
 <!--more-->
-
----
 ### 🤖 DeepCue: Zhao Xintong will WIN the World Snooker Championship
 
 This week, I gave myself a 48-hour challenge:
