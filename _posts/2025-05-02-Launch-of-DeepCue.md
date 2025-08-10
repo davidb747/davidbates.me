@@ -17,7 +17,7 @@ tags:
   - Model Launch
 excerpt: "48-hour sprint to build a snooker match prediction engine using scraped data, feature engineering, and ML models."
 author: david
-show_author: True
+show_author: true
 ---
 
 ### 🤖 DeepCue: Zhao Xintong will WIN the World Snooker Championship
