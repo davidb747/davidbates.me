@@ -52,7 +52,7 @@ MSci Physics graduate from Imperial College London with a strong academic founda
 - End-to-end workflow: feature engineering, hyperparameter tuning, evaluation (AUC, F1, ROC).  
 
 ### [**NFL Performance Prediction Model**](https://davidbates.me/nfl/) — Sports Analytics Project
-*August 2024 – Present*
+*August 2025 – Present*
 - Developed a custom Elo-based rating system with dynamic home-field advantage, quarterback/offense/defense splits, and rolling performance metrics.
 - Integrated weather, coaching, and betting odds into Random Forest and XGBoost models to forecast game outcomes and assess betting market efficiency.
 
