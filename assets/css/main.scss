@@ -114,5 +114,7 @@
 .header [style*="transform"],
 .header .main [style*="transform"] { z-index: auto; }
 
+/* Position the dropdown relative to its parent <li> */
+.navigation ul li.has-children { position: relative; }
 
 
