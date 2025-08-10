@@ -8,21 +8,37 @@ permalink: /
 I'm a Physics graduate from <b>Imperial College London</b>, specialising in <b>data science</b>, <b>analytics</b>, and <b>statistical modelling</b> — particularly applied to <b>sports and real-world decision-making</b>.
 
 <p align="center">
-  <img src="/assets/images/bio-photo.jpeg" alt="David Bates" width="200px" style="border-radius: 50%;">
+<img src="/assets/images/bio-photo.jpeg" alt="David Bates" width="200px" style="border-radius: 50%;">
 </p>
 
 <hr>
 
 <h3>📊 Recent Analysis</h3>
 
----
-layout: articles
-title: Articles - Item (Cover + Excerpt + Read More)
-articles:
-  data_source: site.posts
-  show_excerpt: true
-  show_readmore: true
----
+{% for post in site.posts limit:5 %}
+  <article style="margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #ccc;">
+    
+    {% if post.image %}
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}" alt="{{ post.title }} cover" style="width:100%; height:auto; margin-bottom:0.5em;">
+      </a>
+    {% endif %}
+    
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    
+    <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+    
+    <small>
+      <em>{{ post.date | date: "%B %d, %Y" }}</em> |
+      {% assign words = post.content | number_of_words %}
+      {% assign minutes = words | divided_by: 200 | ceil %}
+      {{ minutes }} min read
+    </small>
+    
+  </article>
+{% endfor %}
+
+
 
 <hr>
 
@@ -31,12 +47,12 @@ articles:
 <p>I'm currently open to <strong>data science</strong> and <strong>consulting roles</strong>, especially those involving:</p>
 
 <ul>
-  <li>Sports analytics or predictive modelling</li>
-  <li>Machine learning and data visualisation</li>
-  <li>Complex problem solving with real-world impact</li>
+<li>Sports analytics or predictive modelling</li>
+<li>Machine learning and data visualisation</li>
+<li>Complex problem solving with real-world impact</li>
 </ul>
 
 <p>
-  Feel free to <a href="/about/">get in touch</a> or connect with me on 
-  <a href="https://www.linkedin.com/in/david-bates-1545ab250/" target="_blank" rel="noopener">LinkedIn</a>.
+Feel free to <a href="/about/">get in touch</a> or connect with me on 
+<a href="https://www.linkedin.com/in/david-bates-1545ab250/" target="_blank" rel="noopener">LinkedIn</a>.
 </p>
