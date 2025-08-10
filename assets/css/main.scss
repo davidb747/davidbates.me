@@ -58,17 +58,6 @@
 .navigation ul li.has-children .dropdown { z-index: 5000; }
 .header, .header .main, .navigation, .navigation ul { overflow: visible !important; }
 
-/* Dropdown basics */
-.navigation__link {
-  padding: 0.75rem 0.5rem; /* adjust to match your theme */
-  display: inline-block;
-}
-
-/* Remove the special parent-only bottom padding */
-.navigation .has-children > a {
-  padding-bottom: inherit;
-}
-
 /* Submenu panel */
 .navigation ul li.has-children > .dropdown {
   display: none;
