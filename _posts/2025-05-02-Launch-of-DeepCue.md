@@ -15,7 +15,6 @@ tags:
   - Neural Networks
   - Model Evaluation
   - Model Launch
-  - David Bates
 excerpt: "48-hour sprint to build a snooker match prediction engine using scraped data, feature engineering, and ML models."
 ---
 
