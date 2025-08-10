@@ -6,13 +6,13 @@ header:
     children:
       - title: "Posts"
         url: /nfl/archives/
-      - title: "Team Ratings'
+      - title: "Team Ratings"
         url: /nfl/team_ratings/
-      - title: "QB Ratings'
+      - title: "QB Ratings"
         url: /nfl/qb_ratings/
-      - title: "Defense Ratings'
+      - title: "Defense Ratings"
         url: /nfl/defense_ratings/
-      - title: "Predictions'
+      - title: "Predictions"
         url: /nfl/predictions/
   - title: "Snooker"
     url: /snooker/
