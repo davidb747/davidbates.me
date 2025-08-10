@@ -3,132 +3,142 @@ layout: page
 permalink: /
 ---
 
-<h2>Hi, I'm David Bates</h2>
+<h1>Hi, I'm David Bates</h1>
 
 <p>
-I’m a Physics graduate from <b>Imperial College London</b> with a passion for
-<b>sports analytics</b>, <b>machine learning</b>, and using data to solve real-world problems.
-I love applying statistical modelling to sport, where numbers can uncover trends, challenge assumptions,
-and improve decision-making.
+  I’m a Physics graduate from <strong>Imperial College London</strong> with a passion for
+  <strong>sports analytics</strong>, <strong>machine learning</strong>, and using data to solve real-world problems.
+  I love applying statistical modelling to sport, where numbers can uncover trends, challenge assumptions,
+  and improve decision-making.
 </p>
 
-<h3>Projects</h3>
+<h2>Projects</h2>
 <ul>
-<li>
-🏈 <a href="https://davidbates.me/nfl/">A custom Elo rating system</a> that tracks and predicts NFL team performance,
-adjusting for factors like home-field advantage and margin of victory.
-</li>
-<li>
-🎯 <a href="https://davidbates.me/deepcue/">DeepCue</a>, a machine-learning model that forecasts snooker outcomes
-by blending historical performance, matchup dynamics, and engineered features.
-</li>
+  <li>
+    🏈 <a href="{{ '/nfl/' | relative_url }}">A custom Elo rating system</a> that tracks and predicts NFL team performance,
+    adjusting for factors like home-field advantage and margin of victory.
+  </li>
+  <li>
+    🎯 <a href="{{ '/deepcue/' | relative_url }}">DeepCue</a>, a machine-learning model that forecasts snooker outcomes
+    by blending historical performance, matchup dynamics, and engineered features.
+  </li>
 </ul>
 
-<!-- Two-column Master's project section -->
-<div style="display: flex; flex-wrap: wrap; align-items: center; margin: 2em 0;">
-<div style="display: flex; flex-wrap: wrap; align-items: top; margin: 2em 0;">
-<!-- Left column: text -->
-<div style="flex: 1; min-width: 280px; padding-right: 1em;">
-<h3>Climate & Data Analysis</h3>
-<p>
-My Master’s thesis focused on analysing satellite climate and emissions datasets,
-applying statistical inference to identify environmental trends and changes over time.
-This project combined data wrangling, statistical modelling, and clear visual storytelling
-to make complex patterns accessible to both scientific and general audiences.
-</p>
-</div>
+<!-- Master's project section -->
+<section aria-labelledby="climate-data-project" style="display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;margin:2em 0;">
+  <!-- Left column: text -->
+  <div style="flex:1;min-width:280px;">
+    <h2 id="climate-data-project">Climate &amp; Data Analysis</h2>
+    <p>
+      My Master’s thesis focused on analysing satellite climate and emissions datasets,
+      applying statistical inference to identify environmental trends and changes over time.
+      This project combined data wrangling, statistical modelling, and clear visual storytelling
+      to make complex patterns accessible to both scientific and general audiences.
+    </p>
+  </div>
 
-<!-- Right column: photo -->
-<div style="flex: 1; min-width: 280px; text-align: center;">
-<img src="/assets/images/masters_poster.jpeg"
-alt="Presenting my Master's project poster"
-style="max-width: 100%; height: auto; border-radius: 8px;">
-<p style="font-size: 0.9em; color: #666;">
-Presenting my Master's project poster on climate and emissions data analysis.
-</p>
-</div>
-</div>
+  <!-- Right column: photo -->
+  <div style="flex:1;min-width:280px;text-align:center;">
+    <img
+      src="{{ '/assets/images/masters_poster.jpeg' | relative_url }}"
+      alt="David Bates presenting a Master's thesis poster on climate and emissions data analysis"
+      style="max-width:100%;height:auto;border-radius:8px;">
+    <p style="font-size:0.9em;color:#666;margin-top:0.5em;">
+      Presenting my Master's project poster on climate and emissions data analysis.
+    </p>
+  </div>
+</section>
 
-<h3>Beyond Sports</h3>
+<h2>Beyond Sports</h2>
 <p>
-My work also spans data automation and large-scale dataset exploration.
-I’ve built automated reporting pipelines and analytical workflows using Python, SQL, and Excel VBA,
-transforming raw information into clear and actionable insights.
+  My work also spans data automation and large-scale dataset exploration.
+  I’ve built automated reporting pipelines and analytical workflows using Python, SQL, and Excel VBA,
+  transforming raw information into clear and actionable insights.
 </p>
 
-<h3>Currently</h3>
+<h2>Currently</h2>
 <p>
-I’m <b>looking for opportunities</b> at the intersection of data science, sport, finance, and technology.
-I’m keen to collaborate—whether that’s co-developing models, exploring new datasets, or simply exchanging ideas.
-If this resonates, let’s talk.
+  I’m <strong>looking for opportunities</strong> at the intersection of data science, sport, finance, and technology.
+  I’m keen to collaborate—whether that’s co-developing models, exploring new datasets, or simply exchanging ideas.
+  If this resonates, let’s talk.
 </p>
 
 <hr>
 
 <h2>Recent Analysis</h2>
 <p>
-Here are my latest deep dives into the projects I’m building. They’re written to be approachable—step by step through the modelling choices, the trade-offs, and the takeaways.
+  Here are my latest deep dives into the projects I’m building. They’re written to be approachable—step by step through the modelling choices, the trade-offs, and the takeaways.
 </p>
 
-
 <style>
-.post-item {
-display: flex;
-margin-bottom: 2em;
-padding-bottom: 1em;
-border-top: 1px solid #ccc;
-}
-.post-thumbnail {
-flex: 0 0 150px;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 1em;
-}
-.post-thumbnail img {
-width: 150px;
-height: auto;
-display: block;
-}
-.post-body {
-flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-.read-more-link {
-margin-top: 0.5em;
-font-weight: bold;
-text-decoration: underline;
-}
-@media (max-width: 768px) {
-.post-thumbnail { display: none !important; }
-.post-item { flex-direction: column; }
-}
+  .post-item {
+    display: flex;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-top: 1px solid #ccc;
+  }
+  .post-thumbnail {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+  }
+  .post-thumbnail img {
+    width: 150px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  .post-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .read-more-link {
+    margin-top: 0.5em;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  /* Remove default button-like focus styles some themes add to anchors */
+  .read-more-link,
+  .read-more-link:focus,
+  .read-more-link:active {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  @media (max-width: 768px) {
+    .post-thumbnail { display: none !important; }
+    .post-item { flex-direction: column; }
+  }
 </style>
 
 {% for post in site.posts limit:5 %}
-<article class="post-item">
-{% if post.image %}
-<div class="post-thumbnail">
-<a href="{{ post.url }}">
-<img src="{{ post.image }}" alt="{{ post.title }} cover">
-</a>
-</div>
-{% endif %}
+  <article class="post-item">
+    {% if post.image %}
+      <div class="post-thumbnail">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }} cover">
+        </a>
+      </div>
+    {% endif %}
 
-<div class="post-body">
-<h3 style="margin-top:0;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-<p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-<small>
-<em>{{ post.date | date: "%B %d, %Y" }}</em> |
-{% assign words = post.content | number_of_words %}
-{% assign minutes = words | divided_by: 200 | ceil %}
-{{ minutes }} min read
-</small>
-<a class="read-more-link" href="{{ post.url }}">Read More</a>
-</div>
-</article>
+    <div class="post-body">
+      <h3 style="margin-top:0;">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <small>
+        <em>{{ post.date | date: "%B %d, %Y" }}</em> |
+        {% assign words = post.content | number_of_words %}
+        {% assign minutes = words | divided_by: 200 | ceil %}
+        {{ minutes }} min read
+      </small>
+      <a class="read-more-link" href="{{ post.url | relative_url }}">Read More</a>
+    </div>
+  </article>
 {% endfor %}
 
 <hr>
@@ -140,12 +150,12 @@ text-decoration: underline;
 </p>
 
 <ul>
-<li>Sports analytics or predictive modelling</li>
-<li>Machine learning and data visualisation</li>
-<li>Complex problem solving with real-world impact</li>
+  <li>Sports analytics or predictive modelling</li>
+  <li>Machine learning and data visualisation</li>
+  <li>Complex problem solving with real-world impact</li>
 </ul>
 
 <p>
-Feel free to <a href="/about/">get in touch</a> or connect with me on
-<a href="https://www.linkedin.com/in/david-bates-1545ab250/" target="_blank" rel="noopener">LinkedIn</a>.
+  Feel free to <a href="{{ '/about/' | relative_url }}">get in touch via my About page</a> or connect with me on
+  <a href="https://www.linkedin.com/in/david-bates-1545ab250/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
 </p>
