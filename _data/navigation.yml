@@ -16,7 +16,7 @@ header:
         url: /nfl/archives/
       
   - title: "Snooker"
-    url: /snooker/
+    url: /deepcue/
     children:
       - title: "DeepCue"
         url: /deepcue/
