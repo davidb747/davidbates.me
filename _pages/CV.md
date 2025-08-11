@@ -3,7 +3,7 @@ permalink: /cv/
 title: "David Bates"
 ---
 
-**Email:** [contact@davidbates.me](mailto:contact@davidbates.me) ⋄ **Phone:** +44 7481 902076 ⋄ **Location:** London, UK  
+**Email:** [contact@davidbates.me](mailto:contact@davidbates.me) ⋄ **LinkedIn:** [https://www.linkedin.com/in/david-bates-1545ab250/](https://www.linkedin.com/in/david-bates-1545ab250/) ⋄ **Location:** London, UK  
 
 ---
 
