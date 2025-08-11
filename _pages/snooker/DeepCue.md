@@ -28,7 +28,10 @@ Python, Pandas, NumPy, XGBoost, PyTorch, Matplotlib
 **Where Next?:**
 - Integrate live betting odds for in-play calibration.
 - Implement Monte Carlo simulations to predict tournament outcomes using game-by-game predictions.
-
+  
 ---
 
 _Updates will follow after the start of the NFL season, as my NFL models are currently taking priority._
+
+**Read more:** [DeepCue Articles](https://davidbates.me/snooker/archives/)
+
